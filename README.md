@@ -1,3 +1,3 @@
 # plan9
-vps
+regex
 my steps to nirvana
