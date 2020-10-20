@@ -2,13 +2,11 @@
 
 https://dnscrypt.info/
 
-openvpn one script install
-https://github.com/Angristan/OpenVPN-install
+https://github.com/jlongua/encrypted-dns-server
 
-nextcloud 20 one script install
-https://www.c-rieger.de/nextcloud-installation-mit-nur-einem-skript/
+plan9-dns dnscrypt protocol
+hosted on Vultr vps in New Jersey, USA
 
-nextcloud manuall install
-https://www.c-rieger.de/nextcloud-installationsanleitung/
+Debian Buster
+docker, prometheus, grafana
 
-fail2ban regex
