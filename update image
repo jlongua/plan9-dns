@@ -1,4 +1,5 @@
 Update the image
+
 # docker pull jedisct1/dnscrypt-server
 
 Verify that the directory containing the keys actually has the keys (a state directory):
@@ -23,7 +24,6 @@ jedisct1/dnscrypt-server init -A -N liberty-ny.com -E '173.199.126.35:443' -M 0.
 
 Check that it's running
 #docker ps
-
 
 Delete old container:
 # docker rm dnscrypt-server-old
