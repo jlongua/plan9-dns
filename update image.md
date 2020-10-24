@@ -18,18 +18,18 @@ Stop the existing container:
 ```
 Rename the existing container:
 ```
-#docker rename dnscrypt-server dnscrypt-server-old
+# docker rename dnscrypt-server dnscrypt-server-old
 ```
 Use the init command again and start the new container:
 ```
-#docker run --name=dnscrypt-server -p 443:443/udp -p 443:443/tcp -p 9100:9100/tcp --net=host \
+# docker run --name=dnscrypt-server -p 443:443/udp -p 443:443/tcp -p 9100:9100/tcp --net=host \
 --restart=unless-stopped \
 -v /etc/dnscrypt-server/keys:/opt/encrypted-dns/etc/keys \
 jedisct1/dnscrypt-server init -A -N plan9-dns.com -E '173.199.126.35:443' -M 0.0.0.0:9100
 ```
 Check that it's running
 ```
-#docker ps
+# docker ps
 ```
 Delete old container:
 ```
