@@ -10,4 +10,4 @@ hosted on Vultr vps in New Jersey, USA
 Debian Buster
 docker, dnscrypt-server-docker, prometheus, grafana
 
-grafana custom dashboard - https://github.com/jlongua/plan9/blob/main/unbound%20dnscrypt-1603229897852.json
+grafana custom dashboard - https://github.com/jlongua/plan9/blob/main/unbound%20dnscrypt-1603554418993.json
