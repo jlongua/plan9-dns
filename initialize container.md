@@ -4,7 +4,7 @@ docker run --name=dnscrypt-server -p 443:443/udp -p 443:443/tcp -p 9100:9100/tcp
 -v /etc/dnscrypt-server/keys:/opt/encrypted-dns/etc/keys \
 jedisct1/dnscrypt-server init -A -N plan9-dns -E '173.199.126.35:443' -M 0.0.0.0:9100
 ```
-note: --net=host is needed to connect prometheus and docker
+note: --net=host is needed to connect prometheus and docker\
 port 3000 is used by grafana
 ```
 root@dnscrypt:~/dnscrypt-server# docker run --name=dnscrypt-server -p 443:443/udp -p 443:443/tcp -p 9100:9100/tcp --net=host \
