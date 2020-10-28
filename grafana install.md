@@ -20,8 +20,8 @@ Start the server
 # systemctl enable grafan-server
 ```
 
-```sh
 Check the status
+```sh
 # systemctl status grafana-server
 ● grafana-server.service - Grafana instance
    Loaded: loaded (/lib/systemd/system/grafana-server.service; enabled; vendor preset: enabled)
@@ -36,7 +36,7 @@ Check the status
 grafana uses port 3000\
 open port 3000 in your firewall
 
-Login to grafana
+Login to grafana\
 Enter into a web browser:
 ```sh
 http://<your server ip>:3000
