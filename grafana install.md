@@ -42,6 +42,6 @@ Enter into a web browser:
 http://<your server ip>:3000
 ```
 user is admin\
-password is admin\
+password is admin
 
 change your password
