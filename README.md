@@ -2,7 +2,7 @@
 
 This is the actual configs used...
 
-Thanks to Frank Dennis and other contributors for making this project possible.\
+Thanks to Frank Denis and other contributors for making this project possible.\
 https://dnscrypt.info
 \
 https://github.com/DNSCrypt/dnscrypt-server-docker
