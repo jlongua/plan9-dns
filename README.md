@@ -1,6 +1,6 @@
 # plan9-dns
 
-This is the actual configs used... so easy any one can do it!
+This is the actual configs used...\
 
 Thanks to Frank Dennis and other contributors for making this project possible.\
 https://dnscrypt.info
