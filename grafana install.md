@@ -33,3 +33,15 @@ Check the status
    CGroup: /system.slice/grafana-server.service
            └─21137 /usr/sbin/grafana-server --config=/etc/grafana/grafana.ini --pidfile=/var/run/grafana/grafana-server.pid --packaging=deb cfg:default.paths.logs=/var/log/grafana cfg:default.paths.data=/var/lib/grafana cfg:default.paths.plugins=/var/lib/grafana/plugins cfg:default.paths.provisioning=/etc/grafana/provisioning
 ```
+grafana uses port 3000\
+open port 3000 in your firewall
+
+Login to grafana
+Enter into a web browser:
+```sh
+http://<your server ip>:3000
+```
+user is admin\
+password is admin\
+
+change your password
