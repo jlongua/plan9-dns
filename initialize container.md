@@ -1,3 +1,5 @@
+pull dnscrypt-server image and initialize container
+
 ```
 docker run --name=dnscrypt-server -p 443:443/udp -p 443:443/tcp -p 9100:9100/tcp --net=host \
 --restart=unless-stopped \
@@ -26,4 +28,8 @@ Provider name: [2.dnscrypt-cert.plan9-dns]
 Congratulations! The container has been properly initialized.
 Take a look up above at the way dnscrypt-proxy has to be configured in order
 to connect to your resolver. Then, start the container with the default command.
+```
+start the server
+```sh
+docker start dnscrypt-server
 ```
