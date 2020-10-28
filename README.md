@@ -2,9 +2,9 @@
 
 This is the actual configs used... so easy any one can do it!
 
-Thanks to Frank Dennis and other contributors for making this project possible.
+Thanks to Frank Dennis and other contributors for making this project possible.\
 https://dnscrypt.info/
-
+\
 https://github.com/DNSCrypt/dnscrypt-server-docker
 
 plan9-dns dnscrypt protocol
