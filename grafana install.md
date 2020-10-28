@@ -45,3 +45,8 @@ user is admin\
 password is admin
 
 change your password
+
+if you forget your password use to reset
+```sh
+grafana-cli admin reset-admin-password
+```
