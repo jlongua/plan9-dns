@@ -20,7 +20,7 @@ prometheus:x:999:
 # id prometheus
 uid=999(prometheus) gid=999(prometheus) groups=999(prometheus)
 ```
-copy configuration and data to created directories 
+copy configuration and data file to created directories 
 ```sh
 # mkdir -p /etc/prometheus/{rules,rules.d,files_sd}  /var/lib/prometheus
 
