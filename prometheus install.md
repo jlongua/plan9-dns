@@ -61,23 +61,32 @@ WantedBy=multi-user.target
 
 create configuration file
 ```sh
-# cat  /etc/prometheus/prometheus.yml
+# cat prometheus.yml 
 # Global config
-global: 
- scrape_interval: 15s # Set the scrape interval to every 15 seconds.
- evaluation_interval: 15s # Evaluate rules every 15 seconds. 
- scrape_timeout: 15s # scrape_timeout is set to the global default (10s).
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
 
-# A scrape configuration containing exactly one endpoint to scrape:# Here it's Prometheus itself.
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
 scrape_configs:
- # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
- - job_name: 'prometheus'
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
 
-# metrics_path defaults to '/metrics'
- # scheme defaults to 'http'.
-
-static_configs:
- - targets: ['localhost:9090']
+  - job_name: 'node'
+    static_configs:
+    - targets: ['127.0.0.1:9100']
 ```
 
 fix permissions
@@ -95,4 +104,12 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/prometheus.serv
 check status
 ```sh
 # systemctl status prometheus
+● prometheus.service - Prometheus systemd service unit
+   Loaded: loaded (/lib/systemd/system/prometheus.service; enabled; vendor preset: enabled)
+   Active: active (running) since Tue 2020-08-18 01:24:21 UTC; 2 months 10 days ago
+ Main PID: 21358 (prometheus)
+    Tasks: 8 (limit: 1149)
+   Memory: 72.4M
+   CGroup: /system.slice/prometheus.service
+           └─21358 /usr/local/bin/prometheus --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus --web.console.templates=/etc/prometheus/consoles --web.console.libraries=/etc/prometheus/console_libraries --web.listen-address=0.0.0.0:9090
 ```
