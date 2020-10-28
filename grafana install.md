@@ -3,7 +3,7 @@ Install grafana on Debian Buster
 https://grafana.com/grafana/download
 
 Note:\
-Install .deb package
+Install .deb package\
 If you install the .deb package, then you will need to manually update Grafana for each new version.\
 I used the open source edition
 
