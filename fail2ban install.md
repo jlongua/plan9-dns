@@ -26,7 +26,7 @@ Local iptables rules
 -A INPUT -p udp -m udp --dport 123 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 53 -j ACCEPT
 -A INPUT -p udp -m udp --dport 53 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 9100 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 9090 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 3000 -j ACCEPT
 -A INPUT -j LOG
 -A INPUT -j DROP
