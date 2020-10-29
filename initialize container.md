@@ -33,3 +33,10 @@ start the server
 ```sh
 docker start dnscrypt-server
 ```
+
+check server status
+``sh
+# docker ps
+CONTAINER ID   IMAGE                      COMMAND                  CREATED       STATUS       PORTS   NAMES
+cbc9de885b8e   jedisct1/dnscrypt-server   "/entrypoint.sh init…"   11 days ago   Up 11 days           dnscrypt-server             
+```
