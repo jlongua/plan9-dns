@@ -8,7 +8,7 @@ check for updates
 # apt upgrade
 ```
 
-install the follwing packages
+install the following packages
 ```sh
 # apt install \
     apt-transport-https \
