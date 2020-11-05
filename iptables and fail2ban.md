@@ -43,3 +43,9 @@ iptables rules
 -A metrics -s 194.36.xxx.xxx/32 -j ACCEPT
 -A metrics -j DROP
 ```
+
+## make rules persistent
+```sh
+apt install iptables-persistent
+iptables-save > /etc/iptables/rules.v4
+```
