@@ -1,11 +1,11 @@
-Install fail2ban to help protect ssh port 22
+## Install fail2ban to help protect ssh port 22
 
-In the vultr control panel under Firewall
-add a firewall for your dnscrypt vps
+### In the vultr control panel under Firewall
+- add a firewall for your dnscrypt vps
 - open ports 443 tcp and udp, 123 udp, 9090 tcp
 - open port 22 tcp (as needed)
 
-iptables rules
+### iptables rules
 - prometheus port 9090 secured with iptables
 
 ```sh
@@ -44,7 +44,7 @@ iptables rules
 -A metrics -j DROP
 ```
 
-## make rules persistent
+### make rules persistent
 ```sh
 apt install iptables-persistent
 iptables-save > /etc/iptables/rules.v4
