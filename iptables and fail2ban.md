@@ -1,14 +1,14 @@
-in progress
-
-Install fail2ban to help protect ssh port 22 and grafana port 3000
+Install fail2ban to help protect ssh port 22
 
 In the vultr control panel under Firewall
 add a firewall for your dnscrypt vps
-open ports 123 udp, 443 tcp and udp, 3000 tcp
+- open ports 443 tcp and udp, 123 udp, 9090 tcp
+- open port 22 tcp (as needed)
 
-Local iptables rules
+iptables rules
+- prometheus port 9090 secured with iptables
+
 ```sh
-# iptables -S
 -P INPUT ACCEPT
 -P FORWARD DROP
 -P OUTPUT ACCEPT
@@ -16,19 +16,14 @@ Local iptables rules
 -N DOCKER-ISOLATION-STAGE-1
 -N DOCKER-USER
 -N DOCKER-ISOLATION-STAGE-2
--N f2b-grafana
--A INPUT -p tcp -m multiport --dports 3000 -j f2b-grafana
+-N metrics
 -A INPUT -i lo -j ACCEPT
 -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 -A INPUT -p udp -m udp --dport 443 -j ACCEPT
 -A INPUT -p udp -m udp --dport 123 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 53 -j ACCEPT
--A INPUT -p udp -m udp --dport 53 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 9090 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 9100 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 3000 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 9090 -j metrics
 -A INPUT -j LOG
 -A INPUT -j DROP
 -A FORWARD -j DOCKER-USER
@@ -42,5 +37,9 @@ Local iptables rules
 -A DOCKER-USER -j RETURN
 -A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
 -A DOCKER-ISOLATION-STAGE-2 -j RETURN
--A f2b-grafana -j RETURN
+-A metrics -s 208.167.xxx.xxx/32 -j ACCEPT   # ip's allowed to accesss prometheus metrics
+-A metrics -s 91.132.xxx.xxx/32 -j ACCEPT    # not actual ips
+-A metrics -s 156.96.xxx.xxx/32 -j ACCEPT
+-A metrics -s 194.36.xxx.xxx/32 -j ACCEPT
+-A metrics -j DROP
 ```
