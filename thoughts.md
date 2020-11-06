@@ -1,9 +1,5 @@
-geoblocking
-
-I use geoblocking on my mail server...
-
-does China, Russia, Brazil, India... really need to connect to the dnscrypt server?
-
-I do notice connections to port 3000 from China, but no login attempts, don't know what their doing.
-I have fail2ban enabled to block these connections to port 3000 for 10 minutes. And block wrong passwords for 24 hours.
-Perhaps thats enough.
+while there is no logs saved, an administrator can stll use commands like netstat\
+I was supprised so many connections from China, Russia, Japan, alot of tor-exits... alot\
+dnscrypt-server appears to be handling the requests just fine\
+thinking of adding one in central and west too\
+also good to see that dnscrypt-server anonymization is being utilzed\
