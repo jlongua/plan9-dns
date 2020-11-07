@@ -46,4 +46,8 @@ Delete old container:
 ```
 # docker rm dnscrypt-server-old
 ```
+Remove dangling images:
+```sh
+docker images prune
+```
 Done!
