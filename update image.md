@@ -48,6 +48,6 @@ Delete old container:
 ```
 Remove dangling images:
 ```sh
-docker images prune
+# docker images prune
 ```
 Done!
