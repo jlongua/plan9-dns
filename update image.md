@@ -12,7 +12,7 @@ Digest: sha256:e570bc4510a803371d1f09158f6c2e68637af49dac3b05533c4265115e55438e
 Status: Image is up to date for jedisct1/dnscrypt-server:latest
 docker.io/jedisct1/dnscrypt-server:latest
 ```
-- if new image is pulled, continue to update
+- if new image is pulled, continue to update\
 Verify that the directory containing the keys actually has the keys (a state directory):
 ```
 # ls -l /etc/dnscrypt-server/keys
