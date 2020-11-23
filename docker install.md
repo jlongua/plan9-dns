@@ -32,5 +32,5 @@ add repository and gpg key
 install docker
 ```sh
 # apt update
-# sudo apt-get install docker-ce docker-ce-cli containerd.io
+# apt install docker-ce docker-ce-cli containerd.io
 ``` 
