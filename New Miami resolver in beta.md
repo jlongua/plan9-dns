@@ -18,8 +18,8 @@ the software used is dnscryp-server docker, nginx, m13253/dns-over-https doh-pro
 
 ## doh-proxy
 ### Firefox settings:
-- network.trr.uri	https://doh1.plan9-dns.com/dns-query
-other settings I used:
+- network.trr.uri	https://doh1.plan9-dns.com/dns-query \
+#### other settings I used:
 - network.trr.custom_uri	https://doh1.plan9-dns.com/dns-query
 - network.trr.bootstrapAddress	104.156.246.39
 - network.trr.mode	3
