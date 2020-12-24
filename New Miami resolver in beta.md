@@ -1,8 +1,8 @@
 A new resolver in Miami Florida is in beta testing now, and is offering ipv4/ipv6, dns-crypt, anonymization, and doh. \
-the software used is dnscryp-server docker, nginx, m13253/dns-over-https doh-proxy. \
+the software used is dnscryp-server docker, nginx, m13253/dns-over-https doh-proxy.
 ## Miami, Florida
 ## dnscrypt
-## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet. \
+## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 ### ipv4
 - [INFO ] Public server address: 104.156.246.39:8443
 - [INFO ] Provider public key: a76ff778fc27545b6152afb1589d3f0701faf74f27bdc1bfd06792a481c30907
