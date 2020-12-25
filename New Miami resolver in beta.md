@@ -1,3 +1,7 @@
+### Logging declaration for Miami resolver
+- no logs using dnscrypt protocol
+- nginx access and error logs used to tune nginx doh.conf while in BETA testing.
+
 A new resolver in Miami Florida is in beta testing now, and is offering ipv4/ipv6, dns-crypt, anonymization, and doh. \
 the software used is dnscryp-server docker, nginx, LE certs via dns api and lexicon, m13253/dns-over-https doh-proxy.
 ## Miami, Florida
