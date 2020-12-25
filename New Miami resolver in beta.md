@@ -32,4 +32,4 @@ the software used is dnscryp-server docker, nginx, LE certs via dns api and lexi
 - stamp = 'sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5ID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
 ### ipv6 2001:19f0:9002:1ecb:5400::1 port 443
 - [static.'plan9-dns-doh1-ipv6']
-- sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
+- stamp = 'sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
