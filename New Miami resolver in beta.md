@@ -1,11 +1,15 @@
 ### Logging policy for Miami resolver
 - dnscrypt protocol - no logs
 - doh-proxy - no logs
-- nginx access and error logs used to tune nginx doh.conf while in BETA testing. \
-all requests to http/1.0 and http/1.1 are blocked and banned
+- nginx access and error logs used to tune nginx and doh-proxy while in BETA testing.
+- all requests to http/1.0 are blocked and banned
+- blocklists of abusive ip's and webcrawlers by myip.ms, blocklist.de, firehol_l1, and abuseipdb. 
+- fail2ban (ipv4 and ipv6) is banning portscans, and older versions of chrome and firefox that the script kiddies like to use.
+- nginx logs are needed for fail2ban, so I'm thinking of 5 minute nginx log rotation and deletion of rotated logs via cronjob.
 
 A new resolver in Miami Florida is in beta testing now, and is offering ipv4/ipv6, dns-crypt, anonymization, and doh. \
 the software used is dnscrypt-server docker, nginx, LE certs via dns api and lexicon, m13253/dns-over-https doh-proxy, prometheus, and fail2ban.
+
 ## Miami, Florida
 ## dnscrypt
 ## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
@@ -31,7 +35,7 @@ the software used is dnscrypt-server docker, nginx, LE certs via dns api and lex
 - network.trr.mode	3
 - network.trr.resolvers	[{ "name": "doh1.plan9-dns", "url": "https://doh1.plan9-dns.com/dns-query" }]
 
-### dnscrypt-proxy settings:
+### dnscrypt-proxy doh settings:
 ## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 ### ipv4 104.156.246.39 port 443
 - [static.'plan9-dns-doh1']
