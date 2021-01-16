@@ -111,3 +111,22 @@ location ~ ^/(?:index|core/ajax/update|ocs/v[12]|status|updater/.+|oc[ms]-provid
 
     More one regex char, the "any not inside", [^xyz] = all that is not xyz – Peter Krauss Sep 20 '20 at 14:53
 
+## Use negative regex assertion:
+
+```sh
+location ~ ^/(?!(favicon\.ico|resources|robots\.txt)) { 
+.... # your stuff 
+} 
+```
+
+Source Negated Regular Expressions in location
+
+Explanation of Regex :
+
+If URL does not match any of the following path
+
+example.com/favicon.ico
+example.com/resources
+example.com/robots.txt
+
+Then it will go inside that location block and will process it.
