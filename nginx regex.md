@@ -130,3 +130,13 @@ example.com/resources
 example.com/robots.txt
 
 Then it will go inside that location block and will process it.
+
+really useful. EG catch any php file except index
+
+```sh
+location ~ /public/(?!index.php$)+.*\.php$ {
+rewrite ^/(.*)$ /public/index.php?url=$1;
+}
+```
+
+– Kojo Sep 24 '18 at 17:51
