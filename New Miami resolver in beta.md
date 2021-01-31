@@ -39,12 +39,12 @@ the software used is dnscrypt-server docker, nginx, LE certs via dns api and lex
 
 ### dnscrypt-docker init
 ```sh
-# docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
+docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
 --restart=unless-stopped \
 -v /etc/dnscrypt-server/keys:/opt/encrypted-dns/etc/keys \
 jedisct1/dnscrypt-server init -A -N doh1.plan9-dns.com -E '104.156.246.39:8443' -M 0.0.0.0:9100
 ```sh
-# docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
+docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
 > --restart=unless-stopped \
 > -v /etc/dnscrypt-server/keys:/opt/encrypted-dns/etc/keys \
 > jedisct1/dnscrypt-server init -A -N doh1.plan9-dns.com -E '104.156.246.39:8443' -M 0.0.0.0:9100
