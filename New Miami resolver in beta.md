@@ -20,7 +20,7 @@ the software used is dnscrypt-server docker, nginx, LE certs via dns api and lex
 - [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMgp2_3ePwnVFthUq-xWJ0_BwH6908nvcG_0GeSpIHDCQciMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
 - [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 
-### ipv6 is not going to happen for the unseeable future because of unwanted connections from amazon to unbound that proved impossible to stop...
+### ipv6 is not going to happen for the unseeable future because of unwanted connections from amazon to unbound that proved impossible to stop... ok, I think the global ipv6 firewall is not working correctly.
 
 ## doh-proxy
 ### Firefox settings:
