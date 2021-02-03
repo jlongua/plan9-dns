@@ -1,18 +1,21 @@
-### Destroyed server, doing a complete rebuild
-Feb 2nd - dnscrypt installed and working (ipv4 only)
+## Miami, Florida dns resolver in beta testing
+- dns-crypt, anonymization, ipv4 (ipv6 coming)
+- doh ipv4 and ipv6
 
+### Feb 2nd rebuild
+Feb 2nd - dnscrypt working \
+Feb 3rd - doh working (accepts tls 1.3 only) \
 
 ### Logging policy for Miami resolver
 - dnscrypt protocol - no logs
 - doh-proxy - no logs
-- nginx access and error logs used to tune nginx and doh-proxy while in BETA testing.
-- all requests to http/1.0 are blocked and banned
-- blocklists of abusive ip's and webcrawlers by myip.ms, blocklist.de, firehol_l1, and abuseipdb. 
-- fail2ban (ipv4 and ipv6) is banning portscans, and older versions of chrome and firefox that the script kiddies like to use.
-- nginx logs are needed for fail2ban, so I'm thinking of 5 minute nginx log rotation and deletion of rotated logs via cronjob.
+- nginx access and error logs used to tune nginx while in BETA testing. 
 
-A new resolver in Miami Florida is in beta testing now, and is offering ipv4, dns-crypt, anonymization, and doh. \
-the software used is dnscrypt-server docker, nginx, LE certs via dns api and lexicon, m13253/dns-over-https doh-proxy, prometheus, and fail2ban.
+the software used is:\
+- dnscrypt-server docker
+- nginx, LE certs via dns api and lexicon
+- m13253/dns-over-https doh-proxy
+- prometheus
 
 ## Miami, Florida
 ## dnscrypt ipv4 port:8443
@@ -20,11 +23,11 @@ the software used is dnscrypt-server docker, nginx, LE certs via dns api and lex
 
 ``` sh
 DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+
 DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 ```
 
-# NOT rebuilt yet
-## doh-proxy
+## doh-proxy 104.156.246.39 port 443
 ### Firefox settings:
 - network.trr.uri	https://doh1.plan9-dns.com/dns-query
 #### other settings I used:
@@ -33,14 +36,15 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 - network.trr.mode	3
 - network.trr.resolvers	[{ "name": "doh1.plan9-dns", "url": "https://doh1.plan9-dns.com/dns-query" }]
 
-# NOT rebuilt yet
 ### dnscrypt-proxy doh settings:
 ## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
-### ipv4 104.156.246.39 port 443
-- [static.'plan9-dns-doh1']
+
+```sh
 - stamp = 'sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5ID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
+```
 
 ### dnscrypt-docker init
+
 ```sh
 root@doh1:~# docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
 > --restart=unless-stopped \
@@ -81,5 +85,4 @@ Provider name: [2.dnscrypt-cert.doh1.plan9-dns.com]
 Congratulations! The container has been properly initialized.
 Take a look up above at the way dnscrypt-proxy has to be configured in order
 to connect to your resolver. Then, start the container with the default command.
-
 ```
