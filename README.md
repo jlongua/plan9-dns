@@ -11,15 +11,12 @@ plan9-dns dnscrypt protocol
 hosted on Vultr vps in New Jersey, USA
 
 Debian Buster\
-docker, dnscrypt-server-docker, prometheus, iptables, fail2ban
+docker, dnscrypt-server-docker, prometheus, iptables, fail2ban for ssh
 
 grafana custom dashboard - https://github.com/jlongua/plan9-dns/blob/main/plan9-dns-1604620842794.json
 
-abuse:
-while logs are not collected or saved,
-an administrator can see ip's that are connected at that moment in time,
-it is an easy matter to grep connections of know abusive ip's,
-if you are listed on abuseipdb.com at 100% confidence you will be blocked from further access.
-This unfortunately applies to tor, exit or not.
-Because of excessive bandwith of some users, generous rate limits will be applied... eventually, will update when limits are in place.
+abuse: \
+This is for personel use only \
+Tor exit or not will be blocked \
+limits could be placed anytime with iptables and/or nginx \
 https://making.pusher.com/per-ip-rate-limiting-with-iptables/#fnref:hashlimit-hashtable-mess
