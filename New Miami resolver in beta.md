@@ -4,14 +4,14 @@
 
 ### Feb 2nd rebuild
 Feb 2nd - dnscrypt working \
-Feb 3rd - doh working (accepts tls 1.3 only) \
+Feb 3rd - doh working (accepts tls 1.3 only)
 
 ### Logging policy for Miami resolver
 - dnscrypt protocol - no logs
 - doh-proxy - no logs
 - nginx access and error logs used to tune nginx while in BETA testing. 
 
-the software used is:\
+the software used is:
 - dnscrypt-server docker
 - nginx, LE certs via dns api and lexicon
 - m13253/dns-over-https doh-proxy
