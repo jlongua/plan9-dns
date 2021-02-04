@@ -105,7 +105,7 @@ to connect to your resolver. Then, start the container with the default command.
 root@doh1:~# docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
 > --restart=unless-stopped \
 > -v /etc/dnscrypt-server/keys:/opt/encrypted-dns/etc/keys \
-> jedisct1/dnscrypt-server init -A -N doh1.plan9-dns.com -E '104.156.246.39:8443,[2001:19f0:9002:1ecb:5400::1]:8443' -M 0.0.0.0:9100
+> jedisct1/dnscrypt-server init -A -N doh1.plan9-dns.com -E '104.156.246.39:8443,[2001:19f0:9002:250:5400::1]:8443' -M 0.0.0.0:9100
 WARNING: Published ports are discarded when using host network mode
 Provider name: [2.dnscrypt-cert.doh1.plan9-dns.com]
 [INFO ] Dropping privileges
@@ -115,15 +115,16 @@ Provider name: [2.dnscrypt-cert.doh1.plan9-dns.com]
 [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
 [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
 [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
-[INFO ] Public server address: [2001:19f0:9002:1ecb:5400::1]:8443
+[INFO ] Public server address: [2001:19f0:9002:250:5400::1]:8443
 [INFO ] Provider public key: eaf90dacb9342b1e78a0bf3ce1e4e0711e14c1254b10e86e40393f22bc3b9631
 [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
-[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdOjg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
-[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWVjYjo1NDAwOjoxXTo4NDQz
+[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIVsyMDAxOjE5ZjA6OTAwMjoyNTA6NTQwMDo6MV06ODQ0MyDq-Q2suTQrHnigvzzh5OBxHhTBJUsQ6G5AOT8ivDuWMSIyLmRuc2NyeXB0LWNlcnQuZG9oMS5wbGFuOS1kbnMuY29t
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSFbMjAwMToxOWYwOjkwMDI6MjUwOjU0MDA6OjFdOjg0NDM
 
 -----------------------------------------------------------------------
 
 Congratulations! The container has been properly initialized.
 Take a look up above at the way dnscrypt-proxy has to be configured in order
 to connect to your resolver. Then, start the container with the default command.
+
 ```
