@@ -1,10 +1,6 @@
 ## Miami, Florida dns resolver in beta testing
-- dns-crypt, anonymization, ipv4 (ipv6 coming)
+- dns-crypt, anonymization, ipv4 and ipv6
 - doh ipv4 and ipv6
-
-### Feb 2nd rebuild
-Feb 2nd - dnscrypt working \
-Feb 3rd - doh working (accepts tls 1.3 only)
 
 ### Logging policy for Miami resolver
 - dnscrypt protocol - no logs
@@ -17,17 +13,26 @@ the software used is:
 - m13253/dns-over-https doh-proxy
 - prometheus
 
-## Miami, Florida
-## dnscrypt ipv4 port:8443
-## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
+### Miami, Florida
+### dnscrypt ipv4 port:8443
+#### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
-``` sh
+```sh
 DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
 
 DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 ```
 
-## doh-proxy 104.156.246.39 port 443
+### dnscrypt ipv6 port:8443
+#### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
+
+```sh
+DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdOjg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+
+DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWVjYjo1NDAwOjoxXTo4NDQz
+```
+
+### doh-proxy 104.156.246.39 port 443
 ### Firefox settings:
 - network.trr.uri	https://doh1.plan9-dns.com/dns-query
 #### other settings I used:
@@ -37,13 +42,20 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 - network.trr.resolvers	[{ "name": "doh1.plan9-dns", "url": "https://doh1.plan9-dns.com/dns-query" }]
 
 ### dnscrypt-proxy doh settings:
-## NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
+#### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
+### ipv4
 
 ```sh
-- stamp = 'sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5ID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
+stamp = 'sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5ID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
 ```
 
-### dnscrypt-docker init
+### ipv6
+
+```sh
+stamp = 'sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
+```
+
+### dnscrypt-docker init ipv4
 
 ```sh
 root@doh1:~# docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
@@ -79,6 +91,35 @@ Provider name: [2.dnscrypt-cert.doh1.plan9-dns.com]
 [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
 [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
 [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
+
+-----------------------------------------------------------------------
+
+Congratulations! The container has been properly initialized.
+Take a look up above at the way dnscrypt-proxy has to be configured in order
+to connect to your resolver. Then, start the container with the default command.
+```
+
+### added ipv6
+
+```sh
+root@doh1:~# docker run --name=dnscrypt-server -p 8443:8443/udp -p 8443:8443/tcp -p 9100:9100/tcp --net=host \
+> --restart=unless-stopped \
+> -v /etc/dnscrypt-server/keys:/opt/encrypted-dns/etc/keys \
+> jedisct1/dnscrypt-server init -A -N doh1.plan9-dns.com -E '104.156.246.39:8443,[2001:19f0:9002:1ecb:5400::1]:8443' -M 0.0.0.0:9100
+WARNING: Published ports are discarded when using host network mode
+Provider name: [2.dnscrypt-cert.doh1.plan9-dns.com]
+[INFO ] Dropping privileges
+[INFO ] State file [/opt/encrypted-dns/etc/keys/state/encrypted-dns.state] found; using existing provider key
+[INFO ] Public server address: 104.156.246.39:8443
+[INFO ] Provider public key: eaf90dacb9342b1e78a0bf3ce1e4e0711e14c1254b10e86e40393f22bc3b9631
+[INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
+[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
+[INFO ] Public server address: [2001:19f0:9002:1ecb:5400::1]:8443
+[INFO ] Provider public key: eaf90dacb9342b1e78a0bf3ce1e4e0711e14c1254b10e86e40393f22bc3b9631
+[INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
+[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdOjg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWVjYjo1NDAwOjoxXTo4NDQz
 
 -----------------------------------------------------------------------
 
