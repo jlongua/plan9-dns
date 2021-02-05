@@ -27,9 +27,9 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdOjg0NDMg6vkNrLk0Kx54oL884eTgcR4UwSVLEOhuQDk_Irw7ljEiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+DNS Stamp: sdns://AQcAAAAAAAAAIVsyMDAxOjE5ZjA6OTAwMjoyNTA6NTQwMDo6MV06ODQ0MyDq-Q2suTQrHnigvzzh5OBxHhTBJUsQ6G5AOT8ivDuWMSIyLmRuc2NyeXB0LWNlcnQuZG9oMS5wbGFuOS1kbnMuY29t
 
-DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWVjYjo1NDAwOjoxXTo4NDQz
+DNS Stamp for Anonymized DNS relaying: sdns://gSFbMjAwMToxOWYwOjkwMDI6MjUwOjU0MDA6OjFdOjg0NDM
 ```
 
 ### doh-proxy 104.156.246.39 port 443
@@ -46,13 +46,13 @@ DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWVjYjo1ND
 ### ipv4
 
 ```sh
-stamp = 'sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5ID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
+stamp = sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5ID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
 ```
 
 ### ipv6
 
 ```sh
-stamp = 'sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZWNiOjU0MDA6OjFdID4aGg9sU_PpekktVwhLW5gHBZ7gV6sVBYdv2D_aPbg4EmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5'
+stamp = sdns://AgcAAAAAAAAAHFsyMDAxOjE5ZjA6OTAwMjoyNTA6NTQwMDo6MV0gPhoaD2xT8-l6SS1XCEtbmAcFnuBXqxUFh2_YP9o9uDgSZG9oMS5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
 ```
 
 ### dnscrypt-docker init ipv4
