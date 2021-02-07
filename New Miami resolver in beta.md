@@ -37,6 +37,7 @@ DNS Stamp:
 DNS Stamp for Anonymized DNS relaying: 
 ```
 
+## not rebuilt yet
 ### doh-proxy 104.156.246.39 port 443
 ### Firefox settings:
 - network.trr.uri	https://doh1.plan9-dns.com/dns-query
