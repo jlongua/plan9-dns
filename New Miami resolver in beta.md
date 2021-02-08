@@ -1,21 +1,22 @@
 ### teardown and rebuilding without docker
 - problems with unwanted connections from amazon being established with unbound when enabling ipv6 in docker
 - trying knot-resolver and encrypted-dns
+- knot-resolver 5.2.0 natively supports dot and doh2
 
 ## Miami, Florida dns resolver in beta testing
 - dns-crypt, anonymization, ipv4 and ipv6
 - doh ipv4 and ipv6
+- dot ipv4 and ipv6
 
 ### Logging policy for Miami resolver
 - dnscrypt protocol - no logs
-- doh-proxy - no logs
-- nginx access and error logs used to tune nginx while in BETA testing. 
+- knot-resolver doh2-proxy - no logs
+- knot-resolver dot - no logs
 
-the software used is:
+### the software used is:
 - encrypted-dns
 - knot-resolver
-- nginx, LE certs via dns api and lexicon
-- m13253/dns-over-https doh-proxy
+- LE certs via dns api and lexicon
 - prometheus
 
 ### Miami, Florida
@@ -23,18 +24,18 @@ the software used is:
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: 
+DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMguTbAKGMCYplJFnHbHEZ2G1-hNLg9Zb5BYRVx6_hjI8kiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
 
-DNS Stamp for Anonymized DNS relaying: 
+DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
 ```
 
 ### dnscrypt ipv6 port:8443
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: 
+DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdOjg0NDMguTbAKGMCYplJFnHbHEZ2G1-hNLg9Zb5BYRVx6_hjI8kiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
 
-DNS Stamp for Anonymized DNS relaying: 
+DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
 ```
 
 ## not rebuilt yet
