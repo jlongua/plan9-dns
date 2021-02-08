@@ -331,4 +331,7 @@ Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public
 Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
 Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4Oj
 Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOW
+
+systemctl enable encrypted-dns
+Created symlink /etc/systemd/system/multi-user.target.wants/encrypted-dns.service → /lib/systemd/system/encrypted-dns.service.
 ```
