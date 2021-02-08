@@ -271,6 +271,7 @@ enabled = false
 tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 ```
 
+### test from cli
 ### start encrypted-dns server
 ```sh
 # encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml 
@@ -288,3 +289,20 @@ tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
 ```
 
+# add systemd unit
+```sh
+# cat /lib/systemd/system/encrypted-dns.service
+[Unit]
+Description=Encrypted DNS Server
+Documentation=https://github.com/jedisct1/encrypted-dns-server
+Wants=network-online.target
+After=network-online.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/bin/encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
