@@ -38,8 +38,8 @@ DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdOjg0NDMguT
 DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
 ```
 
-## not working yet
-## need to upgrade knot-resolver to v5.2.0
+## doh2 working
+## upgraded knot-resolver to v5.2.1
 
 ### doh-proxy 104.156.246.39 port 443
 ### Firefox settings:
@@ -55,11 +55,11 @@ DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1ND
 ### ipv4
 
 ```sh
-stamp = 
+stamp = sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5IDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIEmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
 ```
 
 ### ipv6
 
 ```sh
-stamp =
+stamp = sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIEmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
 ```
