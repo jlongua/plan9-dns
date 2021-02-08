@@ -1,8 +1,3 @@
-### teardown and rebuilding without docker
-- problems with unwanted connections from amazon being established with unbound when enabling ipv6 in docker
-- trying knot-resolver and encrypted-dns
-- knot-resolver 5.2.0 natively supports dot and doh2
-
 ## Miami, Florida dns resolver in beta testing
 - dns-crypt, anonymization, ipv4 and ipv6
 - doh ipv4 and ipv6
