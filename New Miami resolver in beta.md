@@ -38,7 +38,9 @@ DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdOjg0NDMguT
 DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
 ```
 
-## not rebuilt yet
+## not working yet
+## need to upgrade knot-resolver to v5.2.0
+
 ### doh-proxy 104.156.246.39 port 443
 ### Firefox settings:
 - network.trr.uri	https://doh1.plan9-dns.com/dns-query
