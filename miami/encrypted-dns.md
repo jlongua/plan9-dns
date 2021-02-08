@@ -271,7 +271,7 @@ enabled = false
 tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 ```
 
-### test from cli
+### test from cli and show certs
 ### start encrypted-dns server
 ```sh
 # encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml 
@@ -289,7 +289,7 @@ tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
 ```
 
-# add systemd unit
+### add systemd unit
 ```sh
 # cat /lib/systemd/system/encrypted-dns.service
 [Unit]
@@ -305,4 +305,30 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
+```
+### start encrypted-dns server
+```sh
+systemctl daemon-reload
+systemctl start encrypted-dns
+systemctl status encrypted-dns
+● encrypted-dns.service - Encrypted DNS Server
+   Loaded: loaded (/lib/systemd/system/encrypted-dns.service; disabled; vendor preset: enabled)
+   Active: active (running) since Mon 2021-02-08 23:20:55 UTC; 4s ago
+     Docs: https://github.com/jedisct1/encrypted-dns-server
+ Main PID: 12864 (encrypted-dns)
+    Tasks: 7 (limit: 1148)
+   Memory: 70.1M
+   CGroup: /system.slice/encrypted-dns.service
+           └─12864 /usr/bin/encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml
+
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Public server address: 104.156.246.39:8443
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public key: b936c02863026299491671db1c46761b5fa134b
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMguT
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2Lj
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Public server address: [2001:19f0:9002:2a18:5400::1]:8443
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public key: b936c02863026299491671db1c46761b5fa134b
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4Oj
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOW
 ```
