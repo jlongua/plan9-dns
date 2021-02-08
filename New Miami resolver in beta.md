@@ -10,7 +10,7 @@
 
 ### Logging policy for Miami resolver
 - dnscrypt protocol - no logs
-- knot-resolver doh2-proxy - no logs
+- knot-resolver doh2 - no logs
 - knot-resolver dot - no logs
 
 ### the software used is:
