@@ -47,6 +47,7 @@ DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1ND
 
 ### dnscrypt-proxy doh settings:
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
+### certificate hash: Let's Encrypt R3: 3286ff65a65faf32085eea1388c3738ba7e37873c906cce3c4a28b4cc2a58988
 ### ipv4
 
 ```sh
