@@ -1,4 +1,4 @@
-## Miami, Florida dns resolver in beta testing
+### Miami, Florida dns resolver in beta testing
 - dns-crypt, anonymization, ipv4 and ipv6
 - doh ipv4 and ipv6
 - dot ipv4 and ipv6
@@ -14,7 +14,6 @@
 - LE certs via dns api and lexicon
 - prometheus
 
-### Miami, Florida
 ### dnscrypt ipv4 port:8443
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
@@ -34,12 +33,12 @@ DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1ND
 ```
 
 ### doh2
-### tls 1.3 and h2
+#### tls 1.3 and h2 only
 
-### doh-proxy 104.156.246.39 port 443
-### Firefox settings:
+#### doh-proxy 104.156.246.39 port 443
+#### Firefox settings:
 - network.trr.uri	https://doh1.plan9-dns.com/dns-query
-#### other settings I used:
+##### other settings I used:
 - network.trr.custom_uri	https://doh1.plan9-dns.com/dns-query
 - network.trr.bootstrapAddress	104.156.246.39
 - network.trr.mode	3
