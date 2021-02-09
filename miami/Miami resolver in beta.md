@@ -1,4 +1,9 @@
-### Miami, Florida dns resolver in beta testing
+### Miami, Florida
+### encrypted dns resolver in beta testing
+#### server ip
+- 104.156.246.39
+- 2001:19f0:9002:2a18:5400::1
+#### protocols
 - dns-crypt, anonymization, ipv4 and ipv6
 - doh ipv4 and ipv6
 - dot ipv4 and ipv6
