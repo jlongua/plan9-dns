@@ -313,7 +313,7 @@ WantedBy=multi-user.target
 Created symlink /etc/systemd/system/multi-user.target.wants/encrypted-dns.service → /lib/systemd/system/encrypted-dns.service.
 # systemctl status encrypted-dns
 ● encrypted-dns.service - Encrypted DNS Server
-   Loaded: loaded (/lib/systemd/system/encrypted-dns.service; disabled; vendor preset: enabled)
+   Loaded: loaded (/lib/systemd/system/encrypted-dns.service; enabled; vendor preset: enabled)
    Active: active (running) since Mon 2021-02-08 23:20:55 UTC; 4s ago
      Docs: https://github.com/jedisct1/encrypted-dns-server
  Main PID: 12864 (encrypted-dns)
