@@ -271,8 +271,7 @@ enabled = false
 tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 ```
 
-### test from cli and show certs
-### start encrypted-dns server
+### start encrypted-dns server from cli and show certs
 ```sh
 # encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml 
 [INFO ] Dropping privileges
@@ -308,9 +307,11 @@ WantedBy=multi-user.target
 ```
 ### start encrypted-dns server
 ```sh
-systemctl daemon-reload
-systemctl start encrypted-dns
-systemctl status encrypted-dns
+# systemctl daemon-reload
+# systemctl start encrypted-dns
+# systemctl enable encrypted-dns
+Created symlink /etc/systemd/system/multi-user.target.wants/encrypted-dns.service → /lib/systemd/system/encrypted-dns.service.
+# systemctl status encrypted-dns
 ● encrypted-dns.service - Encrypted DNS Server
    Loaded: loaded (/lib/systemd/system/encrypted-dns.service; disabled; vendor preset: enabled)
    Active: active (running) since Mon 2021-02-08 23:20:55 UTC; 4s ago
@@ -332,6 +333,4 @@ Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 
 Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4Oj
 Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOW
 
-systemctl enable encrypted-dns
-Created symlink /etc/systemd/system/multi-user.target.wants/encrypted-dns.service → /lib/systemd/system/encrypted-dns.service.
 ```
