@@ -1,4 +1,7 @@
-### using curl
+### test doh and dot
+https://getdnsapi.net/query/
+
+### use curl
 
 ```sh
 curl -v --doh-url https://doh1.plan9-dns.com/dns-query https://www.google.com
