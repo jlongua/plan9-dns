@@ -24,3 +24,6 @@ http.prometheus.namespace = 'resolver_'
     static_configs:
     - targets: ['127.0.0.1:8453']
 ```
+
+### grafana dashboard knot-resolver
+https://grafana.com/grafana/dashboards/12743
