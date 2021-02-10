@@ -28,7 +28,7 @@ net.listen('104.156.246.39', 853, { kind = 'tls' })
 net.listen('104.156.246.39', 443, { kind = 'doh2' })
 net.listen('::1', 53, { kind = 'dns', freebind = true })
 net.listen('2001:19f0:9002:2a18:5400::1', 853, { kind = 'tls', freebind = true })
-net.listen('2001:19f0:9002:2a18:5400::1', 443, { kind = 'doh2' })
+net.listen('2001:19f0:9002:2a18:5400::1', 443, { kind = 'doh2', freebind = true })
 net.tls("/etc/letsencrypt/plan9-dns.com_ecc/fullchain.pem", "/etc/letsencrypt/plan9-dns.com_ecc/private.key")
 
 -- Load useful modules
