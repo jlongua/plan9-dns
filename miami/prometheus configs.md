@@ -10,7 +10,7 @@ modules = {
 
     'predict',          -- Prefetch expiring/frequent records
 
-    'http',
+    'http',             -- Expose Metrics endpoint for prometheus
 }
 
 http.config({ tls = false, })
