@@ -13,8 +13,25 @@ modules = {
     'http',             -- Expose Metrics endpoint for prometheus
 }
 
+modules.load('prefill')
+prefill.config({
+      ['.'] = {
+              url = 'https://www.internic.net/domain/root.zone',
+              interval = 86400 -- seconds
+      }
+})
+
+modules = { 'serve_stale < cache' }
+
 http.config({ tls = false, })
 http.prometheus.namespace = 'resolver_'
+
+-- Enable temp fs for cache in /etc/fstab
+-- cache.size = cache.fssize() - 10*MB
+
+-- cdc.gov broken DNSSEC
+trust_anchors.set_insecure{'cdc.gov'}
+
 ```
 
 ### prometheus.yml
