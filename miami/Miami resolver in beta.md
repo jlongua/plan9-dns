@@ -5,7 +5,7 @@
 - 2001:19f0:9002:2a18:5400::1
 #### protocols
 - dns-crypt v2, anonymization, ipv4/ipv6
-- doh ipv4/ipv6
+- doh2 ipv4/ipv6
 - dot ipv4/ipv6
 
 ### Logging policy for Miami resolver
