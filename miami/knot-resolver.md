@@ -73,6 +73,16 @@ trust_anchors.set_insecure{'cdc.gov'}
 
 ```
 
+### add tmpfs for cache
+#### add the following to /etc/fstab
+```sh
+tmpfs        /var/cache/knot-resolver        tmpfs   rw,size=250M,uid=knot-resolver,gid=knot-resolver,nosuid,nodev,noexec,mode=0700 0 0
+```
+#### mount tmpfs
+```.sh
+mount -a
+```
+
 #### start and enable knot-resolver
 
 ```sh
