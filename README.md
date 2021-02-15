@@ -17,6 +17,6 @@ grafana custom dashboard - https://github.com/jlongua/plan9-dns/blob/main/plan9-
 
 abuse: \
 This is for personel use only \
-Tor exit or not will be blocked \
-limits could be placed anytime with iptables and/or nginx \
+Tor exits will be blocked \
+limits could be placed anytime with iptables \
 https://making.pusher.com/per-ip-rate-limiting-with-iptables/#fnref:hashlimit-hashtable-mess
