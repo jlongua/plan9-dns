@@ -77,7 +77,7 @@ systemctl enable --now kresd@1.service
 systemctl status kresd@1.service
 ● kresd@1.service - Knot Resolver daemon
    Loaded: loaded (/lib/systemd/system/kresd@.service; enabled; vendor preset: enabled)
-   Active: active (running) since Mon 2021-02-08 16:10:59 UTC; 2s ago
+   Active: active (running) since Sat 2021-02-13 23:21:19 UTC; 2s ago
      Docs: man:kresd.systemd(7)
            man:kresd(8)
  Main PID: 11665 (kresd)
@@ -86,10 +86,17 @@ systemctl status kresd@1.service
    CGroup: /system.slice/system-kresd.slice/kresd@1.service
            └─11665 /usr/sbin/kresd -c /usr/lib/knot-resolver/distro-preconfig.lua -c /etc/knot-resolver/kresd.conf -n
 
-Feb 08 16:10:59 doh1.plan9-dns.com systemd[1]: Starting Knot Resolver daemon...
-Feb 08 16:10:59 doh1.plan9-dns.com kresd[11665]: [tls] RFC 7858 OOB key-pin (0): pin-sha256=""
-Feb 08 16:10:59 doh1.plan9-dns.com kresd[11665]: [tls] RFC 7858 OOB key-pin (1): pin-sha256=""
-Feb 08 16:10:59 doh1.plan9-dns.com systemd[1]: Started Knot Resolver daemon.
-Feb 08 16:10:59 doh1.plan9-dns.com kresd[11665]: [ta_update] refreshing TA for .
-Feb 08 16:10:59 doh1.plan9-dns.com kresd[11665]: [ta_update] next refresh for . in 12 hours
+Feb 13 23:21:18 doh1 systemd[1]: Starting Knot Resolver daemon...
+Feb 13 23:21:19 doh1 kresd[455]: [tls] RFC 7858 OOB key-pin (0): pin-sha256=""
+Feb 13 23:21:19 doh1 kresd[455]: [tls] RFC 7858 OOB key-pin (1): pin-sha256=""
+Feb 13 23:21:19 doh1 systemd[1]: Started Knot Resolver daemon.
+Feb 13 23:21:19 doh1 systemd[1]: Reached target Knot Resolver daemons.
+Feb 13 23:21:19 doh1 systemd[1]: Started Knot Resolver Garbage Collector daemon.
+Feb 13 23:21:19 doh1 kresd[455]: [ta_update] refreshing TA for .
+Feb 13 23:21:19 doh1 kresd[455]: [prefill] root zone file valid for 01 hours 02 minutes, reusing data from disk
+Feb 13 23:21:19 doh1 kres-cache-gc[641]: Knot Resolver Cache Garbage Collector, version 5.2.1
+Feb 13 23:21:19 doh1 kresd[455]: [prefill] root zone successfully parsed, import started
+Feb 13 23:21:19 doh1 kresd[455]: [prefill] root zone refresh in 01 hours 02 minutes
+Feb 13 23:21:19 doh1 kresd[455]: [ta_update] refreshing TA for .
+Feb 13 23:21:20 doh1 kresd[455]: [ta_update] next refresh for . in 12 hours
 ```
