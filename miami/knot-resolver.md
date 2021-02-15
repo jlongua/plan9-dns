@@ -4,15 +4,16 @@
 - https://dnsflagday.net/2020/
 
 ### install knot-resolver for Debian 10 buster
-- https://software.opensuse.org//download.html?project=home%3ACZ-NIC%3Aknot-resolver-latest&package=knot-resolver
+- OFFICIAL download to add repo
+- https://www.knot-resolver.cz/download/
 
+#### this will create knot-resolver-latest.list in /etc/apt/sources.list.d and add gpg key
 ```sh
-For Debian 10 run the following:
+wget https://secure.nic.cz/files/knot-resolver/knot-resolver-release.deb
+dpkg -i knot-resolver-release.deb
+apt update
+apt install -y knot-resolver
 
-echo 'deb http://download.opensuse.org/repositories/home:/CZ-NIC:/knot-resolver-latest/Debian_10/ /' | sudo tee /etc/apt/sources.list.d/home:CZ-NIC:knot-resolver-latest.list
-curl -fsSL https://download.opensuse.org/repositories/home:CZ-NIC:knot-resolver-latest/Debian_10/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_CZ-NIC_knot-resolver-latest.gpg > /dev/null
-sudo apt update
-sudo apt install knot-resolver
 ```
 
 ### configure knot-resolver
