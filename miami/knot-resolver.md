@@ -18,7 +18,7 @@ apt install -y knot-resolver
 
 ### configure knot-resolver
 
-### cat /etc/knot-resolver/kresd.conf
+#### cat /etc/knot-resolver/kresd.conf
 ```sh
 -- SPDX-License-Identifier: CC0-1.0
 -- vim:syntax=lua:set ts=4 sw=4:
@@ -66,13 +66,13 @@ trust_anchors.set_insecure{'cdc.gov'}
 
 ```
 
-### start and enable knot-resolver
+#### start and enable knot-resolver
 
 ```sh
 systemctl enable --now kresd@1.service
 ```
 
-### check status
+#### check status
 ```sh
 systemctl status kresd@1.service
 ● kresd@1.service - Knot Resolver daemon
