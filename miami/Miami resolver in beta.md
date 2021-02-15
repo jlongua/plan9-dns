@@ -4,19 +4,19 @@
 - 104.156.246.39
 - 2001:19f0:9002:2a18:5400::1
 #### protocols
-- dns-crypt, anonymization, ipv4 and ipv6
-- doh ipv4 and ipv6
-- dot ipv4 and ipv6
+- dns-crypt v2, anonymization, ipv4/ipv6
+- doh ipv4/ipv6
+- dot ipv4/ipv6
 
 ### Logging policy for Miami resolver
-- dnscrypt protocol - no logs
+- dnscrypt v2 protocol - no logs
 - knot-resolver doh2 - no logs
 - knot-resolver dot - no logs
 
 ### the software used is:
-- encrypted-dns
-- knot-resolver
-- LE certs via dns api and lexicon
+- encrypted-dns v0.3.22
+- knot-resolver v5.2.1
+- acme.sh and lexicon dns api for LE certs
 - prometheus
 
 ### dnscrypt ipv4 port:8443
@@ -59,7 +59,6 @@ stamp = sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5IDKG_2WmX68yCF7qE4jDc4un43hzyQbM4
 ```
 
 #### ipv6
-
 ```sh
 stamp = sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIEmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
 ```
