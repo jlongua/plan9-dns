@@ -1,0 +1,3 @@
+```sh
+apt install socat
+```
