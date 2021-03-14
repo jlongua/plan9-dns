@@ -1,8 +1,8 @@
 ### Miami, Florida
 ### encrypted dns resolver in beta testing
 #### server ip
-- 104.156.246.39
-- 2001:19f0:9002:2a18:5400::1
+- 45.63.110.187
+- 2001:19f0:9002:1d74:5400::1
 #### protocols
 - dns-crypt v2, anonymization, ipv4/ipv6
 - doh2 ipv4/ipv6
@@ -16,38 +16,38 @@
 ### the software used is:
 - encrypted-dns v0.3.22
 - knot-resolver v5.2.1
-- acme.sh and lexicon dns api for LE certs
+- acme.sh dns alias for LE certs
 - prometheus
 
-### dnscrypt ipv4 port:8443
+### ipv4 dnscrypt port:8443
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMguTbAKGMCYplJFnHbHEZ2G1-hNLg9Zb5BYRVx6_hjI8kiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyA2IkjVtzrJwMH8G2LfnJ-biUx869AnsX1oKNftwiw-ICMyLmRuc2NyeXB0LWNlcnQuZHJhY28ucGxhbjktbnMyLmNvbQ
 
-DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
+DNS Stamp for Anonymized DNS relaying: sdns://gRI0NS42My4xMTAuMTg3Ojg0NDM
 ```
 
-### dnscrypt ipv6 port:8443
+### ipv6 dnscrypt port:8443
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdOjg0NDMguTbAKGMCYplJFnHbHEZ2G1-hNLg9Zb5BYRVx6_hjI8kiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
+DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgNiJI1bc6ycDB_Bti35yfm4lMfOvQJ7F9aCjX7cIsPiAjMi5kbnNjcnlwdC1jZXJ0LmRyYWNvLnBsYW45LW5zMi5jb20
 
-DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
+DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjoxXTo4NDQz
 ```
 
 ### doh2
 #### tls 1.3 and h2 only
 
-#### doh-proxy 104.156.246.39 port 443
+#### doh-proxy 45.63.110.187 port 443
 #### Firefox settings:
-- network.trr.uri	https://doh1.plan9-dns.com/dns-query
+- network.trr.uri	https://draco.plan9-ns2.com/dns-query
 ##### other settings I used:
-- network.trr.custom_uri	https://doh1.plan9-dns.com/dns-query
-- network.trr.bootstrapAddress	104.156.246.39
+- network.trr.custom_uri	https://draco.plan9-ns2.com/dns-query
+- network.trr.bootstrapAddress	45.63.110.187
 - network.trr.mode	3
-- network.trr.resolvers	[{ "name": "doh1.plan9-dns", "url": "https://doh1.plan9-dns.com/dns-query" }]
+- network.trr.resolvers	[{ "name": "draco.plan9-ns2", "url": "https://draco.plan9-ns2.com/dns-query" }]
 
 ### dnscrypt-proxy doh settings:
 #### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
@@ -64,11 +64,11 @@ stamp = sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdIDKG_2WmX68yC
 ```
 
 ### dot
-- 104.156.246.39 port 853
-- doh1.plan9-dns.com
+- 45.63.110.187 port 853
+- draco.plan9-ns2.com
 
 - spki if needed
 ```sh
 $ echo | openssl s_client -connect '104.156.246.39:853' 2>/dev/null | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-zIvEJpuYVlmdTCoRF1hG8RiA9DKV5HBlUWzsPIBGJh8=
+47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 ```
