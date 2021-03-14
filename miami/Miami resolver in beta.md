@@ -69,6 +69,6 @@ stamp = sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdIDKG_2WmX68yC
 
 - spki if needed
 ```sh
-$ echo | openssl s_client -connect '104.156.246.39:853' 2>/dev/null | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+$ echo | openssl s_client -connect '45.63.110.187:853' 2>/dev/null | openssl x509 -pubkey -noout | openssl pkey -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
+YCDBCR2KtlxiQaOQKYhqND47jubbTEuEAo9+E/wUUuU=
 ```
