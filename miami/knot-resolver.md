@@ -33,11 +33,11 @@ apt install -y knot-resolver
 
 -- Network interface configuration
 net.listen('127.0.0.1', 53, { kind = 'dns' })                                      -- local  dns  ipv4
-net.listen('104.156.246.39', 853, { kind = 'tls' })                                -- public dot  ipv4
-net.listen('104.156.246.39', 443, { kind = 'doh2' })                               -- public doh2 ipv4
+net.listen('45.63.110.187', 853, { kind = 'tls' })                                -- public dot  ipv4
+net.listen('45.63.110.187', 443, { kind = 'doh2' })                               -- public doh2 ipv4
 net.listen('::1', 53, { kind = 'dns', freebind = true })                           -- local  dns  ipv6
-net.listen('2001:19f0:9002:2a18:5400::1', 853, { kind = 'tls', freebind = true })  -- public dot  ipv6
-net.listen('2001:19f0:9002:2a18:5400::1', 443, { kind = 'doh2', freebind = true }) -- public doh2 ipv6
+net.listen('2001:19f0:9002:1d74:5400::1', 853, { kind = 'tls', freebind = true })  -- public dot  ipv6
+net.listen('2001:19f0:9002:1d74:5400::1', 443, { kind = 'doh2', freebind = true }) -- public doh2 ipv6
 net.listen('127.0.0.1', 8453, { kind = 'webmgmt' })                                -- local  http prometheus
 net.tls("/etc/letsencrypt/plan9-dns.com_ecc/fullchain.pem", "/etc/letsencrypt/plan9-dns.com_ecc/private.key")
 
