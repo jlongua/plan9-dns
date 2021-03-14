@@ -36,8 +36,8 @@
 # ]
 
 listen_addrs = [
-    { local = "0.0.0.0:8443", external = "104.156.246.39:8443" },
-    { local = "[::]:8443",       external = "[2001:19f0:9002:2a18:5400::1]:8443" }
+    { local = "0.0.0.0:8443", external = "45.63.110.187:8443" },
+    { local = "[::]:8443",       external = "[2001:19f0:9002:1d74:5400::1]:8443" }
 ]
 
 
@@ -149,7 +149,7 @@ group = "encrypted-dns"
 
 ## Provider name (with or without the `2.dnscrypt-cert.` prefix)
 
-provider_name = "2.dnscrypt-cert.doh1.plan9-dns.com"
+provider_name = "2.dnscrypt-cert.draco.plan9-ns2.com"
 
 
 ## Does the server support DNSSEC?
@@ -276,16 +276,16 @@ tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 # encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml 
 [INFO ] Dropping privileges
 [INFO ] State file [/etc/encrypted-dns/keys/state/encrypted-dns.state] found; using existing provider key
-[INFO ] Public server address: 104.156.246.39:8443
-[INFO ] Provider public key: b936c02863026299491671db1c46761b5fa134b83d65be41611571ebf86323c9
-[INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
-[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMguTbAKGMCYplJFnHbHEZ2G1-hNLg9Zb5BYRVx6_hjI8kiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
-[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2LjI0Ni4zOTo4NDQz
-[INFO ] Public server address: [2001:19f0:9002:2a18:5400::1]:8443
-[INFO ] Provider public key: b936c02863026299491671db1c46761b5fa134b83d65be41611571ebf86323c9
-[INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
-[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdOjg0NDMguTbAKGMCYplJFnHbHEZ2G1-hNLg9Zb5BYRVx6_hjI8kiMi5kbnNjcnlwdC1jZXJ0LmRvaDEucGxhbjktZG5zLmNvbQ
-[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MmExODo1NDAwOjoxXTo4NDQz
+[INFO ] Public server address: 45.63.110.187:8443
+[INFO ] Provider public key: 362248d5b73ac9c0c1fc1b62df9c9f9b894c7cebd027b17d6828d7edc22c3e20
+[INFO ] Provider name: 2.dnscrypt-cert.draco.plan9-ns2.com
+[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyA2IkjVtzrJwMH8G2LfnJ-biUx869AnsX1oKNftwiw-ICMyLmRuc2NyeXB0LWNlcnQuZHJhY28ucGxhbjktbnMyLmNvbQ
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRI0NS42My4xMTAuMTg3Ojg0NDM
+[INFO ] Public server address: [2001:19f0:9002:1d74:5400::1]:8443
+[INFO ] Provider public key: 362248d5b73ac9c0c1fc1b62df9c9f9b894c7cebd027b17d6828d7edc22c3e20
+[INFO ] Provider name: 2.dnscrypt-cert.draco.plan9-ns2.com
+[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgNiJI1bc6ycDB_Bti35yfm4lMfOvQJ7F9aCjX7cIsPiAjMi5kbnNjcnlwdC1jZXJ0LmRyYWNvLnBsYW45LW5zMi5jb20
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjoxXTo4NDQz
 ```
 
 ### add systemd unit
@@ -322,15 +322,14 @@ Created symlink /etc/systemd/system/multi-user.target.wants/encrypted-dns.servic
    CGroup: /system.slice/encrypted-dns.service
            └─12864 /usr/bin/encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml
 
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Public server address: 104.156.246.39:8443
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public key: b936c02863026299491671db1c46761b5fa134b
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEzEwNC4xNTYuMjQ2LjM5Ojg0NDMguT
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRMxMDQuMTU2Lj
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Public server address: [2001:19f0:9002:2a18:5400::1]:8443
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public key: b936c02863026299491671db1c46761b5fa134b
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.doh1.plan9-dns.com
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoyYTE4Oj
-Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOW
-
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Public server address: 45.63.110.187:8443
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public key: 362248d5b73ac9c0c1fc1b62df9c9f9b894c7ceb
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.draco.plan9-ns2.com
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRI0NS42My4xMTA
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Public server address: [2001:19f0:9002:1d74:5400::1]:8443
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider public key: 362248d5b73ac9c0c1fc1b62df9c9f9b894c7ceb
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] Provider name: 2.dnscrypt-cert.draco.plan9-ns2.com
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU
+Feb 08 23:20:55 doh1.plan9-dns.com encrypted-dns[12864]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWY
 ```
