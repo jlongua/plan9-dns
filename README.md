@@ -15,7 +15,7 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRIxNzMuMTk5LjEyNi4zNTo0NDM
 Protocols: dnscrypt v2 plus anonymization, doh2, and dot \
 IP: 45.63.110.187 port:8443\
     2001:19f0:9002:1d74:5400::1 port: 8443 \
-Provider name: 2.dnscrypt-cert.draco.plan9-ns2.com \
+Provider name: 2.dnscrypt-cert.draco.plan9-ns2.com
 ##### dnscrypt ipv4 stamps
 ```sh
 DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyA2IkjVtzrJwMH8G2LfnJ-biUx869AnsX1oKNftwiw-ICMyLmRuc2NyeXB0LWNlcnQuZHJhY28ucGxhbjktbnMyLmNvbQ
