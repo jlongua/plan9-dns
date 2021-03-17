@@ -11,7 +11,7 @@ DNS Stamp: sdns://AQcAAAAAAAAAEjE3My4xOTkuMTI2LjM1OjQ0MyCS8B98_Phukw8hJOslzJhsbr
 
 DNS Stamp for Anonymized DNS relaying: sdns://gRIxNzMuMTk5LjEyNi4zNTo0NDM
 ```
-### Floida resolver
+### Florida resolver
 Protocols: dnscrypt v2 plus anonymization, doh2, and dot \
 IP: 45.63.110.187 port:8443\
     2001:19f0:9002:1d74:5400::1 port: 8443 \
@@ -28,12 +28,12 @@ DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgNi
 
 DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjoxXTo4NDQz
 ```
-##### doh2 dnscrypt ipv4 stamp \
+##### doh2 dnscrypt ipv4 stamp
 IP: 45.63.110.187 port:443
 ```sh
 DNS Stamp: sdns://AgcAAAAAAAAADTQ1LjYzLjExMC4xODcgMob_ZaZfrzIIXuoTiMNzi6fjeHPJBszjxKKLTMKliYgTZHJhY28ucGxhbjktbnMyLmNvbQovZG5zLXF1ZXJ5
 ``` 
-##### doh2 dnscrypt ipv6 stamp \
+##### doh2 dnscrypt ipv6 stamp
 IP: 2001:19f0:9002:1d74:5400::1 port:443
 ```sh
 DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2RyYWNvLnBsYW45LW5zMi5jb20KL2Rucy1xdWVyeQ
@@ -41,11 +41,11 @@ DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX6
 ##### doh2 Firefox settings:
 – network.trr.uri https://draco.plan9-ns2.com/dns-query \
 – network.trr.bootstrapAddress 45.63.110.187 \
-– network.trr.mode \
+– network.trr.mode
 
 ##### dot
 – IP: 45.63.110.187 port 853 \
 – IP: 2001:19f0:9002:1d74:5400::1 port:853 \
-– draco.plan9-ns2.com \
+– draco.plan9-ns2.com
 
 – spki: YCDBCR2KtlxiQaOQKYhqND47jubbTEuEAo9+E/wUUuU=
