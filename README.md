@@ -41,7 +41,7 @@ DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX6
 ##### doh2 Firefox settings:
 – network.trr.uri https://draco.plan9-ns2.com/dns-query \
 – network.trr.bootstrapAddress 45.63.110.187 \
-– network.trr.mode
+– network.trr.mode 3
 
 ##### dot
 – IP: 45.63.110.187 port 853 \
