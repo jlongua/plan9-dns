@@ -5,7 +5,7 @@ Thanks to Frank Denis and other contributors for making this project possible.\
 Protocols: dnscrypt v2 plus anonymization, (doh coming soon) \
 IP: 173.199.126.35 port: 443 \
 Provider name: 2.dnscrypt-cert.plan9-dns
-dnscrypt stamps
+##### dnscrypt stamps
 ```sh
 DNS Stamp: sdns://AQcAAAAAAAAAEjE3My4xOTkuMTI2LjM1OjQ0MyCS8B98_Phukw8hJOslzJhsbrLO5xnxZ5B67ZuFTknPUhkyLmRuc2NyeXB0LWNlcnQucGxhbjktZG5zr 
 
