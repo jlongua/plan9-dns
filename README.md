@@ -1,5 +1,5 @@
 Thanks to Frank Denis and other contributors for making this project possible.\
-https://dnscrypt.info
+[DNSCrypt](https://dnscrypt.info)
 
 ### New Jersey resolver
 Protocols: dnscrypt v2 plus anonymization, (doh coming soon) \
