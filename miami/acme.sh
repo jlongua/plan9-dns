@@ -1,9 +1,8 @@
 ```sh
 apt install socat
 ```
-ok vultr has rolled out a new api v2 so no more dns challenge for certs...
-but acme,sh saves the day again with alias mode!
-Using a provider with a supported api I can issue certs for my vultr hosts.
-Looks like I can register a domain with namesilo and user their api with acme.sh to manipulate the dns records.
-Hopefully they don't have any limits using their api like namecheap.
-
+ok, vultr has rolled out a new api v2 so no more dns challenge for certs...
+but I can use acme.sh with alias mode and a supported domain registrar.
+I have registered a domain with namesilo and have succesfuly used their api with acme.sh to manipulate the dns records.
+So looking for someone with python skills to redo the acme.sh or lexicon to work with vultr v2 api.
+I put in a pull request for lexicon and looks like I was elected! Unfortunately I can barely write bash scripts...
