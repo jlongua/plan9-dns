@@ -1,8 +1,10 @@
+## plan9-ns2
 ### Miami, Florida
-### encrypted dns resolver in beta testing
+
 #### server ip
 - 45.63.110.187
 - 2001:19f0:9002:1d74:5400::1
+
 #### protocols
 - dns-crypt v2, anonymization, ipv4/ipv6
 - doh2 ipv4/ipv6
@@ -20,19 +22,17 @@
 - prometheus
 
 ### ipv4 dnscrypt port:8443
-#### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyA2IkjVtzrJwMH8G2LfnJ-biUx869AnsX1oKNftwiw-ICMyLmRuc2NyeXB0LWNlcnQuZHJhY28ucGxhbjktbnMyLmNvbQ
+DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyCcjeRhPcJTsKhZ8iViALPd39CussG6SnprFT9z_1f03x0yLmRuc2NyeXB0LWNlcnQucGxhbjktbnMyLmNvbQ
 
 DNS Stamp for Anonymized DNS relaying: sdns://gRI0NS42My4xMTAuMTg3Ojg0NDM
 ```
 
 ### ipv6 dnscrypt port:8443
-#### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
 
 ```sh
-DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgNiJI1bc6ycDB_Bti35yfm4lMfOvQJ7F9aCjX7cIsPiAjMi5kbnNjcnlwdC1jZXJ0LmRyYWNvLnBsYW45LW5zMi5jb20
+DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgnI3kYT3CU7CoWfIlYgCz3d_QrrLBukp6axU_c_9X9N8dMi5kbnNjcnlwdC1jZXJ0LnBsYW45LW5zMi5jb20
 
 DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjoxXTo4NDQz
 ```
@@ -49,18 +49,17 @@ DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1ND
 - network.trr.mode	3
 - network.trr.resolvers	[{ "name": "draco.plan9-ns2", "url": "https://draco.plan9-ns2.com/dns-query" }]
 
-### dnscrypt-proxy doh settings:
-#### NOTE: You must use static configs in dnscrypt-proxy for now, because the server is not published yet.
+### dnscrypt doh settings:
 #### certificate hash: Let's Encrypt R3: 3286ff65a65faf32085eea1388c3738ba7e37873c906cce3c4a28b4cc2a58988
 #### ipv4
 
 ```sh
-stamp = sdns://AgcAAAAAAAAADjEwNC4xNTYuMjQ2LjM5IDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIEmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
+stamp = sdns://AgcAAAAAAAAADTQ1LjYzLjExMC4xODcgMob_ZaZfrzIIXuoTiMNzi6fjeHPJBszjxKKLTMKliYgTZHJhY28ucGxhbjktbnMyLmNvbQovZG5zLXF1ZXJ5
 ```
 
 #### ipv6
 ```sh
-stamp = sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoyYTE4OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIEmRvaDEucGxhbjktZG5zLmNvbQovZG5zLXF1ZXJ5
+stamp = sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2RyYWNvLnBsYW45LW5zMi5jb20KL2Rucy1xdWVyeQ
 ```
 
 ### dot
