@@ -2,7 +2,7 @@ Thanks to Frank Denis and other contributors for making this project possible.\
 [DNSCrypt](https://dnscrypt.info)
 
 ### New Jersey resolver
-Protocols: dnscrypt v2 plus anonymization, doh \
+Protocols: dnscrypt v2 plus anonymization, and doh \
 IP: 173.199.126.35 port: 443 \
 Provider name: 2.dnscrypt-cert.plan9-dns
 ##### dnscrypt stamps
