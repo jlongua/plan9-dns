@@ -14,7 +14,7 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRIxNzMuMTk5LjEyNi4zNTo0NDM
 ##### doh dnscrypt stamp
 IP: 173.199.126.35 port: 443
 ```sh
-sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2h5ZHJhLnBsYW45LW5zMS5jb20KL2Rucy1xdWVyeQ
+DNS Stamp: sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2h5ZHJhLnBsYW45LW5zMS5jb20KL2Rucy1xdWVyeQ
 ```
 ##### doh Firefox settings:
 – network.trr.uri https://hydra.plan9-ns1.com/dns-query \
