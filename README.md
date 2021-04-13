@@ -1,6 +1,9 @@
 Thanks to Frank Denis and other contributors for making this project possible.\
 [DNSCrypt](https://dnscrypt.info)
 
+#### Abuse and Privacy
+[policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
+
 ### New Jersey resolver
 Protocols: dnscrypt v2 plus anonymization, and doh \
 IP: 173.199.126.35 port: 443 \
