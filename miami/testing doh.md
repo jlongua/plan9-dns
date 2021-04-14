@@ -1,5 +1,5 @@
 ### test doh and dot
-https://getdnsapi.net/query/
+- [get DNS api.net](https://getdnsapi.net/query)
 
 ### use curl
 
