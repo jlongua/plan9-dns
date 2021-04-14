@@ -1,5 +1,5 @@
 ```sh
-$ curl -k http://doh1.plan9-dns.com:9090/metrics
+$ curl -k http://draco.plan9-dns.com:9090/metrics
 
 # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
 # TYPE go_gc_duration_seconds summary
