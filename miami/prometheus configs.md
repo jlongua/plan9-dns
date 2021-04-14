@@ -26,8 +26,8 @@ modules = { 'serve_stale < cache' }
 http.config({ tls = false, })
 http.prometheus.namespace = 'resolver_'
 
--- Enable temp fs for cache in /etc/fstab
--- cache.size = cache.fssize() - 10*MB
+-- Cache size
+cache.size = 400 * MB
 
 -- cdc.gov broken DNSSEC
 trust_anchors.set_insecure{'cdc.gov'}
@@ -43,4 +43,4 @@ trust_anchors.set_insecure{'cdc.gov'}
 ```
 
 ### grafana dashboard knot-resolver
-https://grafana.com/grafana/dashboards/12743
+- [dashboard](https://grafana.com/grafana/dashboards/12743)
