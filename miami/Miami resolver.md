@@ -17,7 +17,7 @@
 
 ### the software used is:
 - encrypted-dns v0.3.22
-- knot-resolver v5.2.1
+- knot-resolver v5.3.1
 - acme.sh dns alias for LE certs
 - prometheus
 
