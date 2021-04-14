@@ -1,7 +1,7 @@
 #### Abuse Policy:
 plan9 encrypted DNS services are for personel use only. \
 Rate limits are in effect with the Miami resolver. \
-Connections are limited to 100/sec per ip.
+Connections are limited to 30/sec per ip.
 
 #### Logging policy:
 - knot-resolver \
