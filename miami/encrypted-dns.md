@@ -1,11 +1,11 @@
 ### read the docs
-- https://dnscrypt.info/
-- https://github.com/jedisct1/encrypted-dns-server
+- [DNScrypt.info](https://dnscrypt.info)
+- [encrypted-dns](https://github.com/jedisct1/encrypted-dns-server)
 
 ### download and install
 ```sh
-# wget https://github.com/jedisct1/encrypted-dns-server/releases/download/0.3.22/encrypted-dns_0.3.22_amd64.deb
-# dpkg -i encrypted-dns_0.3.22_amd64.deb
+# wget https://github.com/jedisct1/encrypted-dns-server/releases/download/0.3.23/encrypted-dns_0.3.23_amd64.deb
+# dpkg -i encrypted-dns_0.3.23_amd64.deb
 ```
 
 ### configure encrypted-dns
