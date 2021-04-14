@@ -1,18 +1,17 @@
 ### read the docs
-- https://www.knot-resolver.cz/
-- https://readthedocs.org/projects/knot-resolver/downloads/pdf/stable/
-- https://dnsflagday.net/2020/
+- [Knot-resolver.cz](https://www.knot-resolver.cz)
+- [Read the Docs]{https://readthedocs.org/projects/knot-resolver/downloads/pdf/stable)
+- [DNS flagday 2020](https://dnsflagday.net/2020)
 
 ### before installing knot resolver
 #### you must have:
 - purhased a domain name
-- set up dns A, quadA (ipv6) records
+- set up dns A, quadA records
 - enabled DNNSEC for your domain (needed for prefill)
 - have valid SSL certs (use ecc not rsa)
 
 ### install knot-resolver for Debian 10 buster
-- OFFICIAL download to add repo
-- https://www.knot-resolver.cz/download/
+- OFFICIAL [download](https://www.knot-resolver.cz/download/) to add repo.
 
 #### this will create knot-resolver-latest.list in /etc/apt/sources.list.d and add gpg key
 ```sh
