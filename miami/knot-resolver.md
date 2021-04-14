@@ -1,6 +1,6 @@
 ### read the docs
 - [Knot-resolver.cz](https://www.knot-resolver.cz)
-- [Read the Docs]{https://readthedocs.org/projects/knot-resolver/downloads/pdf/stable)
+- [Read the Docs](https://readthedocs.org/projects/knot-resolver/downloads/pdf/stable)
 - [DNS flagday 2020](https://dnsflagday.net/2020)
 
 ### before installing knot resolver
