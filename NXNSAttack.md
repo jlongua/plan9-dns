@@ -23,7 +23,7 @@ May 16 14:03:06 draco kresd[5266]: [00000.00][plan] plan 'iimkjkap.com.' type 'A
 ```
 and so on....
 
-so apparently the 'mitigation' doesn't work well
+the 'mitigation' apparently works with aggressive caching and I haven't noticed any server degradation.
 even with the logs, it is very difficult to see where the attack is originating
 
 seems to have slowed down and maybe stopped... I did add some blocking policies, and blocked some ip's and cidr's but not sure if that did anything at all.
