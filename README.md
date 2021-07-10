@@ -4,7 +4,9 @@ Thanks to Frank Denis and other contributors for making this project possible.\
 ### New Jersey resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-Protocols: dnscrypt v2 plus anonymization, and doh \
+Protocols: dnscrypt v2 plus anonymization, and doh
+
+#### DNSCrypt
 IP: 173.199.126.35 port: 443 \
 Provider name: 2.dnscrypt-cert.plan9-dns
 ##### dnscrypt stamps
@@ -26,7 +28,9 @@ DNS Stamp: sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IDKG_2WmX68yCF7qE4jDc4un43hzyQ
 ### Florida resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-Protocols: dnscrypt v2 plus anonymization, doh2, and dot \
+Protocols: dnscrypt v2 plus anonymization, doh2, and dot
+
+#### DNSCrypt
 IP: 45.63.110.187 port:8443\
 2001:19f0:9002:1d74:5400::1 port: 8443 \
 Provider name: 2.dnscrypt-cert.plan9-ns2.com
