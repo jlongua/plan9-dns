@@ -16,8 +16,8 @@
 - knot-resolver dot - no logs
 
 ### the software used is:
-- encrypted-dns v0.3.22
-- knot-resolver v5.3.1
+- encrypted-dns v0.3.23
+- knot-resolver v5.3.2
 - acme.sh dns alias for LE certs
 - prometheus
 
