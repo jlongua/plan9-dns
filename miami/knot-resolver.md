@@ -2,6 +2,7 @@
 - [Knot-resolver.cz](https://www.knot-resolver.cz)
 - [Read the Docs](https://readthedocs.org/projects/knot-resolver/downloads/pdf/stable)
 - [DNS flagday 2020](https://dnsflagday.net/2020)
+- [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
 
 ### before installing knot resolver
 #### you must have:
