@@ -54,8 +54,9 @@ modules.load('prefill')
 prefill.config({
       ['.'] = {
               url = 'https://www.internic.net/domain/root.zone',
-              interval = 86400 -- seconds
-      }
+              interval = 86400,
+              ca_file = '/etc/ssl/certs/ca-certificates.crt',
+}
 })
 
 -- serve timed-out records
@@ -65,7 +66,7 @@ modules = { 'serve_stale < cache' }
 http.config({ tls = false, })
 http.prometheus.namespace = 'resolver_'
 
--- tmpfs non-persistent cache 250mb
+-- tmpfs non-persistent cache 1gb
 cache.size = cache.fssize() - 10*MB
 
 -- cdc.gov broken DNSSEC
@@ -76,7 +77,7 @@ trust_anchors.set_insecure{'cdc.gov'}
 ### add tmpfs for cache
 #### add the following to /etc/fstab
 ```sh
-tmpfs        /var/cache/knot-resolver        tmpfs   rw,size=250M,uid=knot-resolver,gid=knot-resolver,nosuid,nodev,noexec,mode=0700 0 0
+tmpfs        /var/cache/knot-resolver        tmpfs   rw,size=1G,uid=knot-resolver,gid=knot-resolver,nosuid,nodev,noexec,mode=0700 0 0
 ```
 #### mount tmpfs
 ```.sh
