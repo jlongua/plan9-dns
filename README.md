@@ -1,4 +1,4 @@
-Thanks to Frank Denis and other contributors for making this project possible.\
+Thanks to Frank Denis and other contributors for making this project possible.
 - [DNSCrypt](https://dnscrypt.info)
 - [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
 
