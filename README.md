@@ -1,7 +1,7 @@
 Thanks to Frank Denis and other contributors for making this project possible.
 - [DNSCrypt](https://dnscrypt.info)
 - [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
-- [plan9-dns configs on Github] (https://github.com/jlongua/plan9-dns)
+- [plan9-dns configs on Github](https://github.com/jlongua/plan9-dns)
 
 ### New Jersey resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
