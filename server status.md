@@ -1,3 +1,3 @@
-New Jersey resolver will be going offline around May 1st for upgrades. \
+New Jersey resolver will be going offline around September ? for upgrades. \
 
 Miami Resolver is fully functional.
