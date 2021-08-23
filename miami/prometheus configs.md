@@ -5,11 +5,8 @@ net.listen('127.0.0.1', 8453, { kind = 'webmgmt' })
 
 modules = {
     'hints > iterate',  -- Load /etc/hosts and allow custom root hints
-
     'stats',            -- Track internal statistics
-
     'predict',          -- Prefetch expiring/frequent records
-
     'http',             -- Expose Metrics endpoint for prometheus
 }
 
@@ -17,7 +14,8 @@ modules.load('prefill')
 prefill.config({
       ['.'] = {
               url = 'https://www.internic.net/domain/root.zone',
-              interval = 86400 -- seconds
+              interval = 86400,
+              ca_file = '/etc/ssl/certs/ca-certificates.crt',
       }
 })
 
@@ -27,7 +25,7 @@ http.config({ tls = false, })
 http.prometheus.namespace = 'resolver_'
 
 -- Cache size
-cache.size = 400 * MB
+cache.size = cache.fssize() - 10*MB
 
 -- cdc.gov broken DNSSEC
 trust_anchors.set_insecure{'cdc.gov'}
