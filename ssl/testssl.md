@@ -1,6 +1,9 @@
-cli tool to test ssl certs
-https://github.com/drwetter/testssl.sh
+drwetter's cli tool to test ssl certs
+
+- [testssl](https://github.com/drwetter/testssl.sh)
 
 usage:
 
-./testssl.sh <domain>
+```sh
+./testssl.sh domain
+```
