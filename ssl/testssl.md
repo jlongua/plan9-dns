@@ -5,21 +5,25 @@
 usage:
 
 ```sh
-./testssl.sh domain
+./testssl.sh <domain>
 ```
 
 #### print pin
 ```sh
 gnutls-cli --print-cert -p 853 draco.plan9-ns2.com | grep "pin-sha256" | head -1
 ```
+
 #### check expiration date
+
+- [cli](https://www.cyberciti.biz/faq/find-check-tls-ssl-certificate-expiry-date-from-linux-unix/)
+
 ```sh
-openssl x509 -enddate -noout -in /etc/letsencrypt/plan9-ns2.com_ecc/fullchain.com
+openssl x509 -enddate -noout -in /etc/letsencrypt/plan9-ns2.com_ecc/fullchain.pem
 ```
 
 #### ssl labs
 ```sh
-https://www.ssllabs.com/ssltest/analyze.html?d=nc.plan9-fos.com
+https://www.ssllabs.com/ssltest/analyze.html?d=draco.plan9-ns2.com
 ```
 
 #### view cert info
