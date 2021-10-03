@@ -1,6 +1,7 @@
 #### drwetter's cli tool to test ssl certs
 
-- [testssl](https://github.com/drwetter/testssl.sh)
+- [testssl github](https://github.com/drwetter/testssl.sh)
+- [testing TLS/SSL encryption](https://testssl.sh/)
 
 usage:
 
