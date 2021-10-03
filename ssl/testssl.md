@@ -21,6 +21,9 @@ gnutls-cli --print-cert -p 853 draco.plan9-ns2.com | grep "pin-sha256" | head -1
 ```sh
 openssl x509 -enddate -noout -in /etc/letsencrypt/plan9-ns2.com_ecc/fullchain.pem
 ```
+```sh
+openssl s_client -servername axio9.com -connect axio9.com:443 | openssl x509 -noout -dates
+```
 
 #### ssl labs
 ```sh
