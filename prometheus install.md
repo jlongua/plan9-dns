@@ -12,13 +12,12 @@ download and extract prometheus
 ```
 add prometheus user and group
 ```sh
-# groupadd --system prometheus
-# grep prometheus /etc/group
-prometheus:x:999:
-
-# useradd -s /sbin/nologin -r -g prometheus prometheus
+# useradd -rs /sbin/nologin prometheus
 # id prometheus
 uid=999(prometheus) gid=999(prometheus) groups=999(prometheus)
+
+# grep prometheus /etc/group
+prometheus:x:999:
 ```
 copy configuration and data file to created directories 
 ```sh
