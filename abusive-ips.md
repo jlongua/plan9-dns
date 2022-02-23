@@ -7,7 +7,7 @@ https://asn.ipinfo.app/search
 digitalocean \
 linode
 
-#### parsing active connection for abuse
+#### parsing active connections for abuse
 
 ```sh
 netstat -tulpna | grep -Eo '([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})' | cut -d '.' -f 1-4 | sort | uniq -c | sort
