@@ -1,11 +1,13 @@
+## due to government actors all blocks are removed
+## to provide unrestricted, unfiltered dns for all
+
 #### datacenters blocked due to consistent attacks on servers
 
 ``` sh
 https://asn.ipinfo.app/search
 ```
 
-digitalocean \
-linode
+none
 
 #### parsing active connections for abuse
 
