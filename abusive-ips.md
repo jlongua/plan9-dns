@@ -7,7 +7,7 @@
 https://asn.ipinfo.app/search
 ```
 
-none
+digitalocean is a cesspool, hundreds of attacks daily. BLOCKED PERMANATELY
 
 #### parsing active connections for abuse
 
