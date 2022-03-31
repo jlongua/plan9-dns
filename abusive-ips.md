@@ -6,8 +6,12 @@
 ``` sh
 https://asn.ipinfo.app/search
 ```
-
 digitalocean is a cesspool, hundreds of attacks daily. BLOCKED PERMANATELY
+
+digitalocean AS1406, AS205301
+psinet AS3291, AS16463
+censys AS133413, AS398324, AS398705, AS398722
+ponynet AS53667
 
 #### parsing active connections for abuse
 
