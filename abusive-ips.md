@@ -1,17 +1,16 @@
-## due to government actors all blocks are removed
-## to provide unrestricted, unfiltered dns for all
+## Plan9-dns is pleased to provide unfiltered dns for all
 
-#### datacenters blocked due to consistent attacks on servers
 
-``` sh
-https://asn.ipinfo.app/search
-```
-digitalocean is a cesspool, hundreds of attacks daily. BLOCKED PERMANATELY
+#### except datacenters blocked due to consistent attacks on servers
 
 digitalocean AS1406, AS205301\
 psinet AS3291, AS16463\
 censys AS133413, AS398324, AS398705, AS398722\
 ponynet AS53667
+
+``` sh
+https://asn.ipinfo.app/search
+```
 
 #### parsing active connections for abuse
 
