@@ -3,7 +3,7 @@ Thanks to Frank Denis and other contributors for making this project possible.
 - [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
 - [plan9-dns Github](https://github.com/jlongua/plan9-dns)
 
-## May 25th 2022 New Mexico resolver in beta testing
+## May 25th 2022 Mexico City, Mexico resolver in beta testing
 ### Mexico City, Mexico resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
