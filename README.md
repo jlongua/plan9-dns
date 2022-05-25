@@ -40,8 +40,8 @@ about:config\
 – network.trr.mode 3
 
 ##### dot
-– IP: 216.238.80.219 port:853\
-– IP: 2001:19f0:b400:17d1:5400::1 port:853\
+– IPv4: 216.238.80.219 port:853\
+– IPv6: 2001:19f0:b400:17d1:5400::1 port:853\
 – helios.plan9-dns.com
 
 – spki: pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo="
@@ -90,12 +90,12 @@ sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6M2ZmOmZlMzU6Nzc0YV06ODQ0M
 DNS Stamp for Anonymized DNS relaying: sdns://gS1bMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjNmZjpmZTM1Ojc3NGFdOjg0NDM
 ```
 ##### doh2 dnscrypt ipv4 stamp
-IP: 45.63.110.187 port:443
+IPv4: 45.63.110.187 port:443
 ```sh
 DNS Stamp: sdns://AgcAAAAAAAAADTQ1LjYzLjExMC4xODcgMob_ZaZfrzIIXuoTiMNzi6fjeHPJBszjxKKLTMKliYgTZHJhY28ucGxhbjktbnMyLmNvbQovZG5zLXF1ZXJ5
 ``` 
 ##### doh2 dnscrypt ipv6 stamp
-IP: 2001:19f0:9002:1d74:5400::1 port:443
+IPv6: 2001:19f0:9002:1d74:5400::1 port:443
 ```sh
 DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2RyYWNvLnBsYW45LW5zMi5jb20KL2Rucy1xdWVyeQ
 ```
@@ -104,8 +104,8 @@ DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX6
 – network.trr.mode 3
 
 ##### dot
-– IP: 45.63.110.187 port 853 \
-– IP: 2001:19f0:9002:1d74:5400::1 port:853 \
+– IPv4: 45.63.110.187 port 853 \
+– IPv6: 2001:19f0:9002:1d74:5400::1 port:853 \
 – draco.plan9-ns2.com
 
 – spki: pin-sha256="YCDBCR2KtlxiQaOQKYhqND47jubbTEuEAo9+E/wUUuU="
