@@ -76,8 +76,8 @@ Protocols: dnscrypt v2 plus anonymization, doh2, and dot
 
 #### DNSCrypt
 Provider name: 2.dnscrypt-cert.plan9-ns2.com\
-IP: 45.63.110.187 port:8443\
-2001:19f0:9002:1d74:5400::1 port:8443
+IPv4: 45.63.110.187 port:8443\
+IPv6: 2001:19f0:9002:1d74:5400::1 port:8443
 ##### dnscrypt ipv4 stamps
 ```sh
 DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyCcjeRhPcJTsKhZ8iViALPd39CussG6SnprFT9z_1f03x0yLmRuc2NyeXB0LWNlcnQucGxhbjktbnMyLmNvbQ
