@@ -44,7 +44,7 @@ about:config\
 – IP: 2001:19f0:b400:17d1:5400::1 port:853\
 – helios.plan9-dns.com
 
-– spki: 
+– spki: pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo="
 
 ### New Jersey resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
@@ -108,4 +108,4 @@ DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX6
 – IP: 2001:19f0:9002:1d74:5400::1 port:853 \
 – draco.plan9-ns2.com
 
-– spki: YCDBCR2KtlxiQaOQKYhqND47jubbTEuEAo9+E/wUUuU=
+– spki: pin-sha256="YCDBCR2KtlxiQaOQKYhqND47jubbTEuEAo9+E/wUUuU="
