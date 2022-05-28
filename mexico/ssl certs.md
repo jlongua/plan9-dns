@@ -3,7 +3,7 @@
 apt install socat
 curl https://get.acme.sh | sh -s email=plan9-dns@my-email.com
 
-root@helios:~# acme.sh --version
+acme.sh --version
 https://github.com/acmesh-official/acme.sh
 v3.0.5
 ```
@@ -12,15 +12,22 @@ v3.0.5
 apt install python3-pip
 pip3 install dns-lexicon
 
-root@helios:# lexicon --version
+lexicon --version
 lexicon 3.11.2
 ```
 #### issue ssl certs
 okay, I forgot that acme.sh now defaults to zerossl\
 this is alot like google throwing gobs of money at firefox to have google as default search engine\
 so for now I am using zerossl
+
+I added  a user with a limited api key that can only be used for DNS changes
 ```sh
-root@helios:~/.acme.sh# ./acme.sh --issue --dns dns_lexicon -d plan9-dns.com -d 'helios.plan9-dns.com' -d 'kronos.plan9-dns.com' -d 'pluton.plan9-dns.com' --keylength ec-256
+export PROVIDER=vultr
+export LEXICON_VULTR_USERNAME="plan9"
+export LEXICON_VULTR_TOKEN="yada yada yada"
+```
+```sh
+acme.sh --issue --dns dns_lexicon -d plan9-dns.com -d 'helios.plan9-dns.com' -d 'kronos.plan9-dns.com' -d 'pluton.plan9-dns.com' --keylength ec-256
 
 [Mon 23 May 2022 12:20:34 AM UTC] Using CA: https://acme.zerossl.com/v2/DV90
 [Mon 23 May 2022 12:20:34 AM UTC] Multi domain='DNS:plan9-dns.com,DNS:helios.plan9-dns.com,DNS:kronos.plan9-dns.com,DNS:pluton.plan9-dns.com'
@@ -97,7 +104,7 @@ mkdir -p /etc/zerossl/plan9-dns.com_ecc/
 chown -R knot-resolver: /etc/zerossl 
 ```
 ```sh
-root@helios:~/.acme.sh# ./acme.sh --install-cert -d plan9-dns.com --ecc \
+acme.sh --install-cert -d plan9-dns.com --ecc \
         --cert-file /etc/zerossl/plan9-dns.com_ecc/cert.pem \
         --key-file /etc/zerossl/plan9-dns.com_ecc/private.key \
         --fullchain-file /etc/zerossl/plan9-dns.com_ecc/fullchain.pem \
