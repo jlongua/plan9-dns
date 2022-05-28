@@ -9,12 +9,12 @@
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
-### Logging policy for Mexico City resolver
+#### logging policy
 - dnscrypt - no logs
 - knot-resolver doh - no logs
 - knot-resolver dot - no logs
 
-### the software used is:
+#### software used is:
 - knot-resolver v5.5.0
 - encrypted-dns v0.9.1
 - acme.sh, lexicon dns for SSL certs
