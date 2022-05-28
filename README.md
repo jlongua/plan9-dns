@@ -36,7 +36,7 @@ IPv6: 2001:19f0:b400:17d1:5400::1 port:443
 ```sh
 DNS Stamp:sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6OjFdIJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFGhlbGlvcy5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
 ```
-##### certicicate hash
+##### certificate hash
 ```sh
 [CN=ZeroSSL ECC Domain Secure Site CA,O=ZeroSSL,C=AT]: 9a3a34f727deb9bca51003d9ce9c39f8f27dd9c5242901c2bab1a44e635a0219
 ```
