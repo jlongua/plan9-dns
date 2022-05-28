@@ -9,7 +9,7 @@ Thanks to Frank Denis and other contributors for making this project possible.
 ### Mexico City, Mexico resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-Protocols: dnscrypt v2 plus anonymization, and doh2 and dot
+Protocols: dnscrypt v2 plus anonymization, and doh and dot
 
 #### DNSCrypt
 Provider name: 2.dnscrypt-cert.helios.plan9-dns.com\
@@ -26,17 +26,21 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRMyMTYuMjM4LjgwLjIxOTo4NDQz
 DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6OjFdOjg0NDMgcEnNRxbM5Ho_Vq7uAq2kNgqYpuMsSbrBXC506a5fpcokMi5kbnNjcnlwdC1jZXJ0LmhlbGlvcy5wbGFuOS1kbnMuY29t
 DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOmI0MDA6MTdkMTo1NDAwOjoxXTo4NDQz
 ```
-##### doh2 dnscrypt ipv4 stamp
+##### doh dnscrypt ipv4 stamp
 IPv4: 216.238.80.219 port:443
 ```sh
-sdns://AgcAAAAAAAAADjIxNi4yMzguODAuMjE5IJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFGhlbGlvcy5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
+DNS Stamp: sdns://AgcAAAAAAAAADjIxNi4yMzguODAuMjE5IJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFGhlbGlvcy5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
 ```
-##### doh2 dnscrypt ipv6 stamp
+##### doh dnscrypt ipv6 stamp
 IPv6: 2001:19f0:b400:17d1:5400::1 port:443
 ```sh
-sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6OjFdIJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFGhlbGlvcy5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
+DNS Stamp:sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6OjFdIJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFGhlbGlvcy5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
 ```
-##### doh2 Firefox settings:
+##### certicicate hash
+```sh
+[CN=ZeroSSL ECC Domain Secure Site CA,O=ZeroSSL,C=AT]: 9a3a34f727deb9bca51003d9ce9c39f8f27dd9c5242901c2bab1a44e635a0219
+```
+##### doh Firefox settings:
 about:config\
 – network.trr.uri https://helios.plan9-dns.com/dns-query \
 – network.trr.mode 3
@@ -51,7 +55,7 @@ about:config\
 ### New Jersey resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-Protocols: dnscrypt v2 plus anonymization, and doh2
+Protocols: dnscrypt v2 plus anonymization, and doh
 
 #### DNSCrypt
 Provider name: 2.dnscrypt-cert.plan9-dns\
@@ -74,7 +78,7 @@ DNS Stamp: sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IDKG_2WmX68yCF7qE4jDc4un43hzyQ
 ### Florida resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-Protocols: dnscrypt v2 plus anonymization, doh2, and dot
+Protocols: dnscrypt v2 plus anonymization, doh, and dot
 
 #### DNSCrypt
 Provider name: 2.dnscrypt-cert.plan9-ns2.com\
@@ -91,17 +95,17 @@ DNS Stamp:
 sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6M2ZmOmZlMzU6Nzc0YV06ODQ0MyCcjeRhPcJTsKhZ8iViALPd39CussG6SnprFT9z_1f03x0yLmRuc2NyeXB0LWNlcnQucGxhbjktbnMyLmNvbQ
 DNS Stamp for Anonymized DNS relaying: sdns://gS1bMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjNmZjpmZTM1Ojc3NGFdOjg0NDM
 ```
-##### doh2 dnscrypt ipv4 stamp
+##### doh dnscrypt ipv4 stamp
 IPv4: 45.63.110.187 port:443
 ```sh
 DNS Stamp: sdns://AgcAAAAAAAAADTQ1LjYzLjExMC4xODcgMob_ZaZfrzIIXuoTiMNzi6fjeHPJBszjxKKLTMKliYgTZHJhY28ucGxhbjktbnMyLmNvbQovZG5zLXF1ZXJ5
 ``` 
-##### doh2 dnscrypt ipv6 stamp
+##### doh dnscrypt ipv6 stamp
 IPv6: 2001:19f0:9002:1d74:5400::1 port:443
 ```sh
 DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2RyYWNvLnBsYW45LW5zMi5jb20KL2Rucy1xdWVyeQ
 ```
-##### doh2 Firefox settings:
+##### doh Firefox settings:
 – network.trr.uri https://draco.plan9-ns2.com/dns-query \
 – network.trr.mode 3
 
