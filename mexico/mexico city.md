@@ -14,7 +14,7 @@
 - knot-resolver doh - no logs
 - knot-resolver dot - no logs
 
-#### software used is:
+#### software
 - knot-resolver v5.5.0
 - encrypted-dns v0.9.1
 - acme.sh, lexicon dns for SSL certs
