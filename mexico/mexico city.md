@@ -1,4 +1,4 @@
-## helio.plan9-dns.com
+## helios.plan9-dns.com
 ### Mexico City, Mexico
 #### server ip
 - 216.238.80.219
