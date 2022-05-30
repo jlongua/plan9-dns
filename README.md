@@ -69,7 +69,7 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRIxNzMuMTk5LjEyNi4zNTo0NDM
 ##### doh dnscrypt stamp
 IP: 173.199.126.35 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2h5ZHJhLnBsYW45LW5zMS5jb20KL2Rucy1xdWVyeQ
+DNS Stamp: sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOE2h5ZHJhLnBsYW45LW5zMS5jb20KL2Rucy1xdWVyeQ
 ```
 ##### doh Firefox settings:
 – network.trr.uri https://hydra.plan9-ns1.com/dns-query \
@@ -98,12 +98,12 @@ DNS Stamp for Anonymized DNS relaying: sdns://gS1bMjAwMToxOWYwOjkwMDI6MWQ3NDo1ND
 ##### doh dnscrypt ipv4 stamp
 IPv4: 45.63.110.187 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAADTQ1LjYzLjExMC4xODcgMob_ZaZfrzIIXuoTiMNzi6fjeHPJBszjxKKLTMKliYgTZHJhY28ucGxhbjktbnMyLmNvbQovZG5zLXF1ZXJ5
+DNS Stamp: sdns://AgcAAAAAAAAADTQ1LjYzLjExMC4xODcgRE69Z7uD-IB7OSHpOKyReLiCvVCq2xEjHwRM9fCN984TZHJhY28ucGxhbjktbnMyLmNvbQovZG5zLXF1ZXJ5
 ``` 
 ##### doh dnscrypt ipv6 stamp
 IPv6: 2001:19f0:9002:1d74:5400::1 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIDKG_2WmX68yCF7qE4jDc4un43hzyQbM48Sii0zCpYmIE2RyYWNvLnBsYW45LW5zMi5jb20KL2Rucy1xdWVyeQ
+DNS Stamp: sdns://AgcAAAAAAAAAHVsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdIEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOE2RyYWNvLnBsYW45LW5zMi5jb20KL2Rucy1xdWVyeQ
 ```
 ##### doh Firefox settings:
 – network.trr.uri https://draco.plan9-ns2.com/dns-query \
