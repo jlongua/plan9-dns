@@ -5,7 +5,7 @@ Connections are limited to 15/sec per ip.
 
 #### Logging policy:
 - knot-resolver \
-doh2 - no logs \
+doh - no logs \
 dot - no logs
 - dnscrypt v2 \
 no logs
