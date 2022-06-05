@@ -34,7 +34,7 @@ DNS Stamp: sdns://AgcAAAAAAAAADjIxNi4yMzguODAuMjE5IJo6NPcn3rm8pRAD2c6cOfjyfdnFJC
 ##### doh dnscrypt ipv6 stamp
 IPv6: 2001:19f0:b400:17d1:5400:4ff:fe00:1267 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6NGZmOmZlMDA6MTI2N10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUaGVsaW9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
+DNS Stamp: sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6NGZmOmZlMDA6MTI2N10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkYaGVsaW9zLnBsYW45LWRucy5jb206NDQzCi9kbnMtcXVlcnk
 ```
 ##### certificate hash
 ```sh
