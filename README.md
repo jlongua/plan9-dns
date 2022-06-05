@@ -5,7 +5,7 @@ Thanks to Frank Denis and other contributors for making this project possible.
 - [Knot Resolver Read the Docs](https://knot-resolver.readthedocs.io/en/stable/index.html)
 - [Knot Resolver Gitlab](https://github.com/CZ-NIC/knot-resolver)
 
-## May 25th 2022 Mexico City, Mexico resolver in beta testing
+##
 ### Mexico City, Mexico resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
@@ -52,29 +52,18 @@ about:config\
 
 – spki: pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo="
 
+##
+## Pull Request Submitted to Shut Down New Jersey Resolver for Upgrades
 ### New Jersey resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-Protocols: dnscrypt v2 plus anonymization, and doh
+#### New name
+kronos.plan9-dns.com
 
-#### DNSCrypt
-Provider name: 2.dnscrypt-cert.plan9-dns\
-IP: 173.199.126.35 port:443
-##### dnscrypt stamps
-```sh
-DNS Stamp: sdns://AQcAAAAAAAAAEjE3My4xOTkuMTI2LjM1OjQ0MyCS8B98_Phukw8hJOslzJhsbrLO5xnxZ5B67ZuFTknPUhkyLmRuc2NyeXB0LWNlcnQucGxhbjktZG5z
+#### additional protolcols and ipv6 coming
+Protocols: dnscrypt v2 plus anonymization, doh, and dot
 
-DNS Stamp for Anonymized DNS relaying: sdns://gRIxNzMuMTk5LjEyNi4zNTo0NDM
-```
-##### doh dnscrypt stamp
-IP: 173.199.126.35 port:443
-```sh
-DNS Stamp: sdns://AgcAAAAAAAAADjE3My4xOTkuMTI2LjM1IEROvWe7g_iAezkh6TiskXi4gr1QqtsRIx8ETPXwjffOE2h5ZHJhLnBsYW45LW5zMS5jb20KL2Rucy1xdWVyeQ
-```
-##### doh Firefox settings:
-– network.trr.uri https://hydra.plan9-ns1.com/dns-query \
-– network.trr.mode 3
-
+##
 ### Florida resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
