@@ -14,7 +14,7 @@ Protocols: dnscrypt v2 plus anonymization, and doh and dot
 #### DNSCrypt
 Provider name: 2.dnscrypt-cert.helios.plan9-dns.com\
 IPv4: 216.238.80.219 port:8443\
-IPv6: 2001:19f0:b400:17d1:5400::1 port:8443
+IPv6: 2001:19f0:b400:17d1:5400:4ff:fe00:1267 port:8443
 
 ##### dnscrypt ipv4 stamps
 ```sh
@@ -23,8 +23,8 @@ DNS Stamp for Anonymized DNS relaying: sdns://gRMyMTYuMjM4LjgwLjIxOTo4NDQz
 ```
 ##### dnscrypt ipv6 stamps
 ```sh
-DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6OjFdOjg0NDMgcEnNRxbM5Ho_Vq7uAq2kNgqYpuMsSbrBXC506a5fpcokMi5kbnNjcnlwdC1jZXJ0LmhlbGlvcy5wbGFuOS1kbnMuY29t
-DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOmI0MDA6MTdkMTo1NDAwOjoxXTo4NDQz
+DNS Stamp: sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6NGZmOmZlMDA6MTI2N106ODQ0MyBwSc1HFszkej9Wru4CraQ2Cpim4yxJusFcLnTprl-lyiQyLmRuc2NyeXB0LWNlcnQuaGVsaW9zLnBsYW45LWRucy5jb20
+DNS Stamp for Anonymized DNS relaying: sdns://gS1bMjAwMToxOWYwOmI0MDA6MTdkMTo1NDAwOjRmZjpmZTAwOjEyNjddOjg0NDM
 ```
 ##### doh dnscrypt ipv4 stamp
 IPv4: 216.238.80.219 port:443
