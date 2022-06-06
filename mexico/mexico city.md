@@ -2,7 +2,7 @@
 ### Mexico City, Mexico
 #### server ip
 - 216.238.80.219
-- 2001:19f0:b400:17d1:5400::1
+- 2001:19f0:b400:17d1:5400:4ff:fe00:1267
 
 #### protocols
 - dns-crypt, anonymization, ipv4/ipv6
