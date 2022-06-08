@@ -5,7 +5,7 @@ Thanks to Frank Denis and other contributors for making this project possible.
 - [Knot Resolver Read the Docs](https://knot-resolver.readthedocs.io/en/stable/index.html)
 - [Knot Resolver Gitlab](https://github.com/CZ-NIC/knot-resolver)
 
-##
+## 
 ### Mexico City, Mexico resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
@@ -52,8 +52,8 @@ about:config\
 
 – spki: pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo="
 
-##
-## Pull Request Submitted to Shut Down New Jersey Resolver for Upgrades
+## 
+## New Jersey Resolver shutdown for Upgrades
 ### New Jersey resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
