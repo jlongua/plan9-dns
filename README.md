@@ -27,14 +27,14 @@ DNS Stamp: sdns://AQcAAAAAAAAAKlsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M1
 DNS Stamp for Anonymized DNS relaying: sdns://gSpbMjAwMToxOWYwOjU6M2JkNzo1NDAwOjRmZjpmZTA1OmRhODNdOjg0NDM
 ```
 ##### doh dnscrypt ipv4 stamp
-IPv4:  port:443
+IPv4: 207.246.87.96 port:443
 ```sh
-DNS Stamp: 
+DNS Stamp: sdns://AgcAAAAAAAAADTIwNy4yNDYuODcuOTYgmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUa3Jvbm9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
 ```
 ##### doh dnscrypt ipv6 stamp
-IPv6:  port:443
+IPv6: 2001:19f0:5:3bd7:5400:4ff:fe05:da83 port:443
 ```sh
-DNS Stamp: 
+DNS Stamp: sdns://AgcAAAAAAAAAJVsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUa3Jvbm9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
 ```
 ##### certificate hash
 ```sh
