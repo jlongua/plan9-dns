@@ -1,6 +1,5 @@
-New resolver in Mexico is in the works...
+Mexico City, Mexico resolver in testing
 
-after Mexico resolver is up and running,
-New Jersy resolver will be taken down for upgrades.
+New Jersy, USA resolver in testing
 
-Miami Resolver is fully functional.
+Miami Resolver is fully functional
