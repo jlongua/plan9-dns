@@ -13,18 +13,18 @@ Protocols: dnscrypt v2 plus anonymization, and doh and dot
 
 #### DNSCrypt
 Provider name: 2.dnscrypt-cert.kronos.plan9-dns.com\
-IPv4:  port:8443\
-IPv6:  port:8443
+IPv4: 207.246.87.96 port:8443\
+IPv6: 2001:19f0:5:3bd7:5400:4ff:fe05:da83 port:8443
 
 ##### dnscrypt ipv4 stamps
 ```sh
-DNS Stamp: 
-DNS Stamp for Anonymized DNS relaying: 
+DNS Stamp: sdns://AQcAAAAAAAAAEjIwNy4yNDYuODcuOTY6ODQ0MyCtk9t3hxvHvzfcFYkfJEmYVa4ieLrxGZlYLHBXA7P2OiQyLmRuc2NyeXB0LWNlcnQua3Jvbm9zLnBsYW45LWRucy5jb20
+DNS Stamp for Anonymized DNS relaying: sdns://gRIyMDcuMjQ2Ljg3Ljk2Ojg0NDM
 ```
 ##### dnscrypt ipv6 stamps
 ```sh
-DNS Stamp: 
-DNS Stamp for Anonymized DNS relaying: 
+DNS Stamp: sdns://AQcAAAAAAAAAKlsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M106ODQ0MyCtk9t3hxvHvzfcFYkfJEmYVa4ieLrxGZlYLHBXA7P2OiQyLmRuc2NyeXB0LWNlcnQua3Jvbm9zLnBsYW45LWRucy5jb20
+DNS Stamp for Anonymized DNS relaying: sdns://gSpbMjAwMToxOWYwOjU6M2JkNzo1NDAwOjRmZjpmZTA1OmRhODNdOjg0NDM
 ```
 ##### doh dnscrypt ipv4 stamp
 IPv4:  port:443
@@ -46,8 +46,8 @@ about:config\
 – network.trr.mode 3
 
 ##### dot
-– IPv4:  port:853\
-– IPv6:  port:853\
+– IPv4: 207.246.87.96 port:853\
+– IPv6: 2001:19f0:5:3bd7:5400:04ff:fe05:da83 port:853\
 – kronos.plan9-dns.com
 
 – spki: pin-sha256=""
