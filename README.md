@@ -5,7 +5,54 @@ Thanks to Frank Denis and other contributors for making this project possible.
 - [Knot Resolver Read the Docs](https://knot-resolver.readthedocs.io/en/stable/index.html)
 - [Knot Resolver Gitlab](https://github.com/CZ-NIC/knot-resolver)
 
-## 
+
+### New Jersey, USA resolver
+#### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
+
+Protocols: dnscrypt v2 plus anonymization, and doh and dot
+
+#### DNSCrypt
+Provider name: 2.dnscrypt-cert.kronos.plan9-dns.com\
+IPv4:  port:8443\
+IPv6:  port:8443
+
+##### dnscrypt ipv4 stamps
+```sh
+DNS Stamp: 
+DNS Stamp for Anonymized DNS relaying: 
+```
+##### dnscrypt ipv6 stamps
+```sh
+DNS Stamp: 
+DNS Stamp for Anonymized DNS relaying: 
+```
+##### doh dnscrypt ipv4 stamp
+IPv4:  port:443
+```sh
+DNS Stamp: 
+```
+##### doh dnscrypt ipv6 stamp
+IPv6:  port:443
+```sh
+DNS Stamp: 
+```
+##### certificate hash
+```sh
+[CN=ZeroSSL ECC Domain Secure Site CA,O=ZeroSSL,C=AT]: 9a3a34f727deb9bca51003d9ce9c39f8f27dd9c5242901c2bab1a44e635a0219
+```
+##### doh Firefox settings:
+about:config\
+– network.trr.uri https://kronos.plan9-dns.com/dns-query \
+– network.trr.mode 3
+
+##### dot
+– IPv4:  port:853\
+– IPv6:  port:853\
+– helios.plan9-dns.com
+
+– spki: pin-sha256=""
+
+
 ### Mexico City, Mexico resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
@@ -52,18 +99,8 @@ about:config\
 
 – spki: pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo="
 
-## 
-## New Jersey Resolver shutdown for Upgrades
-### New Jersey resolver
-#### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
-#### New name
-kronos.plan9-dns.com
 
-#### additional protolcols and ipv6 coming
-Protocols: dnscrypt v2 plus anonymization, doh, and dot
-
-##
 ### Florida resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
