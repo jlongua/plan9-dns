@@ -29,12 +29,12 @@ DNS Stamp for Anonymized DNS relaying: sdns://gSpbMjAwMToxOWYwOjU6M2JkNzo1NDAwOj
 ##### doh dnscrypt ipv4 stamp
 IPv4: 207.246.87.96 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAADTIwNy4yNDYuODcuOTYgmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUa3Jvbm9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
+DNS Stamp: sdns://AgcAAAAAAAAADTIwNy4yNDYuODcuOTYgmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkYa3Jvbm9zLnBsYW45LWRucy5jb206NDQzCi9kbnMtcXVlcnk
 ```
 ##### doh dnscrypt ipv6 stamp
 IPv6: 2001:19f0:5:3bd7:5400:4ff:fe05:da83 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAAJVsyMDAxOjE5ZjA6NTozYmQ3OjU0MDA6NGZmOmZlMDU6ZGE4M10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUa3Jvbm9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
+DNS Stamp: sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6NGZmOmZlMDA6MTI2N10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkYaGVsaW9zLnBsYW45LWRucy5jb206NDQzCi9kbnMtcXVlcnk
 ```
 ##### certificate hash
 ```sh
@@ -80,13 +80,12 @@ DNS Stamp for Anonymized DNS relaying: sdns://gS1bMjAwMToxOWYwOmI0MDA6MTdkMTo1ND
 ##### doh dnscrypt ipv4 stamp
 IPv4: 216.238.80.219 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAADjIxNi4yMzguODAuMjE5IJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZFGhlbGlvcy5wbGFuOS1kbnMuY29tCi9kbnMtcXVlcnk
+DNS Stamp: sdns://AgcAAAAAAAAADjIxNi4yMzguODAuMjE5IJo6NPcn3rm8pRAD2c6cOfjyfdnFJCkBwrqxpE5jWgIZGGhlbGlvcy5wbGFuOS1kbnMuY29tOjQ0MwovZG5zLXF1ZXJ5
 ```
 ##### doh dnscrypt ipv6 stamp
 IPv6: 2001:19f0:b400:17d1:5400:4ff:fe00:1267 port:443
 ```sh
-DNS Stamp: sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6NGZmOmZlMDA6MTI2N10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkUaGVsaW9zLnBsYW45LWRucy5jb20KL2Rucy1xdWVyeQ
-```
+DNS Stamp: sdns://AgcAAAAAAAAAKFsyMDAxOjE5ZjA6YjQwMDoxN2QxOjU0MDA6NGZmOmZlMDA6MTI2N10gmjo09yfeubylEAPZzpw5-PJ92cUkKQHCurGkTmNaAhkYaGVsaW9zLnBsYW45LWRucy5jb206NDQzCi9kbnMtcXVlcnk
 ##### certificate hash
 ```sh
 [CN=ZeroSSL ECC Domain Secure Site CA,O=ZeroSSL,C=AT]: 9a3a34f727deb9bca51003d9ce9c39f8f27dd9c5242901c2bab1a44e635a0219
