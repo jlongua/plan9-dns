@@ -50,7 +50,7 @@ about:config\
 – IPv6: 2001:19f0:5:3bd7:5400:04ff:fe05:da83 port:853\
 – kronos.plan9-dns.com
 
-spki pin
+– spki: pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo="
 ```sh
 gnutls-cli --print-cert -p 853 kronos.plan9-dns.com | grep "pin-sha256" | head -1
  - subject `CN=plan9-dns.com', issuer `CN=ZeroSSL ECC Domain Secure Site CA,O=ZeroSSL,C=AT', serial 0x0094dc926e2b8a814758cf41589c5bd188, EC/ECDSA key 256 bits, signed using ECDSA-SHA384, activated `2022-05-23 00:00:00 UTC', expires `2022-08-21 23:59:59 UTC', pin-sha256="JCdojGRg8TPvBpIcr+NKwTl8d98FsiEkrOZ8cKcX3Qo=
