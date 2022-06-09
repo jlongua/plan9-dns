@@ -48,7 +48,7 @@ about:config\
 ##### dot
 – IPv4:  port:853\
 – IPv6:  port:853\
-– helios.plan9-dns.com
+– kronos.plan9-dns.com
 
 – spki: pin-sha256=""
 
