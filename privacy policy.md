@@ -1,13 +1,12 @@
 #### Abuse Policy:
 plan9 encrypted DNS services are for personel use only. \
-Rate limits are in effect, Connections are limited to 15/sec per ip.
+Rate limits are in effect.
 
 #### Logging policy:
 - knot-resolver \
-doh - no logs \
-dot - no logs
+no logs
 - dnscrypt v2 \
 no logs
 
 Service is not guaranteed, alternative DNS backups are standard practice.
-Mitigations are in effect to block abusers. eg. tls and http errors and portscans.
+Mitigations are in effect to block abusers.
