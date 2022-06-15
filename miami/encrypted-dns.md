@@ -37,7 +37,7 @@
 
 listen_addrs = [
     { local = "0.0.0.0:8443", external = "45.63.110.187:8443" },
-    { local = "[::]:8443",       external = "[2001:19f0:9002:1d74:5400::1]:8443" }
+    { local = "[::]:8443",       external = "[2001:19f0:9002:1d74:5400:3ff:fe35:774a]:8443" }
 ]
 
 
@@ -277,15 +277,15 @@ tokens = ["Y2oHkDJNHz", "G5zY3J5cHQtY", "C5zZWN1cmUuZG5z"]
 [INFO ] Dropping privileges
 [WARN ] No state file found... creating a new provider key
 [INFO ] Public server address: 45.63.110.187:8443
-[INFO ] Provider public key: 9c8de4613dc253b0a859f2256200b3dddfd0aeb2c1ba4a7a6b153f73ff57f4df
+[INFO ] Provider public key:... 
 [INFO ] Provider name: 2.dnscrypt-cert.plan9-ns2.com
-[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyCcjeRhPcJTsKhZ8iViALPd39CussG6SnprFT9z_1f03x0yLmRuc2NyeXB0LWNlcnQucGxhbjktbnMyLmNvbQ
-[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRI0NS42My4xMTAuMTg3Ojg0NDM
+[INFO ] DNS Stamp: sdns://...
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://...
 [INFO ] Public server address: [2001:19f0:9002:1d74:5400::1]:8443
-[INFO ] Provider public key: 9c8de4613dc253b0a859f2256200b3dddfd0aeb2c1ba4a7a6b153f73ff57f4df
+[INFO ] Provider public key:...
 [INFO ] Provider name: 2.dnscrypt-cert.plan9-ns2.com
-[INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgnI3kYT3CU7CoWfIlYgCz3d_QrrLBukp6axU_c_9X9N8dMi5kbnNjcnlwdC1jZXJ0LnBsYW45LW5zMi5jb20
-[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjoxXTo4NDQz
+[INFO ] DNS Stamp: sdns://...
+[INFO ] DNS Stamp for Anonymized DNS relaying: sdns://...
 ```
 
 ### add systemd unit
@@ -323,14 +323,13 @@ Created symlink /etc/systemd/system/multi-user.target.wants/encrypted-dns.servic
            └─6684 /usr/bin/encrypted-dns --config /etc/encrypted-dns/encrypted-dns.toml
 
 Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Public server address: 45.63.110.187:8443
-Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Provider public key: 9c8de4613dc253b0a859f2256200b3dddfd0aeb2c1ba4a7a6b153f73ff57f4df
+Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Provider public key:...
 Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Provider name: 2.dnscrypt-cert.plan9-ns2.com
-Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp:
-sdns://AQcAAAAAAAAAEjQ1LjYzLjExMC4xODc6ODQ0MyCcjeRhPcJTsKhZ8iViALPd39CussG6SnprFT9z_1f03x0yLmRuc2NyeXB0LWNlcnQucGxhbjktbnMyLmNvbQ
-Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gRI0NS42My4xMTAuMTg3Ojg0NDM
+Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp: sdns://...
+Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://...
 Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Public server address: [2001:19f0:9002:1d74:5400::1]:8443
-Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Provider public key: 9c8de4613dc253b0a859f2256200b3dddfd0aeb2c1ba4a7a6b153f73ff57f4df
+Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Provider public key:...
 Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] Provider name: 2.dnscrypt-cert.plan9-ns2.com
-Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp: sdns://AQcAAAAAAAAAIlsyMDAxOjE5ZjA6OTAwMjoxZDc0OjU0MDA6OjFdOjg0NDMgnI3kYT3CU7CoWfIlYgCz3d_QrrLBukp6axU_c_9X9N8dMi5kbnNjcnlwdC1jZXJ0LnBsYW45LW5zMi5jb20
-Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://gSJbMjAwMToxOWYwOjkwMDI6MWQ3NDo1NDAwOjoxXTo4NDQz
+Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp: sdns://...
+Mar 19 21:21:35 draco.plan9-ns2.com encrypted-dns[6684]: [INFO ] DNS Stamp for Anonymized DNS relaying: sdns://...
 ```
