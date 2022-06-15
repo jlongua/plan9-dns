@@ -12,7 +12,7 @@ Thanks to Frank Denis and other contributors for making this project possible.
 #### DNSCrypt
 Server name: TBA\
 Anon name: TBA\
-Protocols: dnscrypt v2 plus anonymization, and doh
+Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
 
 
@@ -22,7 +22,7 @@ Protocols: dnscrypt v2 plus anonymization, and doh
 #### DNSCrypt
 Server name: TBA\
 Anon name: TBA\
-Protocols: dnscrypt v2 plus anonymization, and doh
+Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
 
 
@@ -32,5 +32,5 @@ Protocols: dnscrypt v2 plus anonymization, and doh
 #### DNSCrypt
 Server name: plan9-ns2\
 Anon name: anon-plan9-ns2\
-Protocols: dnscrypt v2 plus anonymization, and doh
+Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
