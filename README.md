@@ -9,8 +9,15 @@ Thanks to Frank Denis and other contributors for making this project possible.
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 #### DNSCrypt
-Server name: TBA\
-Anon name: TBA\
+Server names: tentative\
+plan9dns-nj\
+plan9dns-nj-ipv6\
+plan9dns-nj-doh\
+plan9dns-nj-doh-ipv6\
+
+Anon name: tentative\
+anon-plan9dns-nj\
+
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
 
