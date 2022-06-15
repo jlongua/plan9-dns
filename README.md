@@ -16,7 +16,7 @@ plan9-nj-doh\
 plan9-nj-doh-ipv6
 
 Anon name: tentative\
-anon-plan9dns-nj
+anon-plan9-nj
 
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
@@ -27,13 +27,13 @@ Protocols: dnscrypt v2 plus anonymization, and doh\
 
 #### DNSCrypt
 Server names: tentative\
-plan9-mx\
-plan9-mx-ipv6\
-plan9-mx-doh\
-plan9-mx-doh-ipv6
+plan9-mc\
+plan9-mc-ipv6\
+plan9-mc-doh\
+plan9-mc-doh-ipv6
 
 Anon name: tentative\
-anon-plan9dns-mx
+anon-plan9-mc
 
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
@@ -45,10 +45,11 @@ Protocols: dnscrypt v2 plus anonymization, and doh\
 #### DNSCrypt
 Server names:
 plan9-ns2\
-plan9-ns2-ipv6
-plan9-ns2-doh
+plan9-ns2-ipv6\
+plan9-ns2-doh\
 plan9-ns2-doh-ipv6
 
-Anon name: anon-plan9-ns2\
+Anon name: anon-plan9-ns2
+
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
