@@ -7,15 +7,13 @@
 #### protocols
 - dns-crypt, anonymization, ipv4/ipv6
 - doh ipv4/ipv6
-- dot ipv4/ipv6
 
 #### logging policy
 - dnscrypt - no logs
 - knot-resolver doh - no logs
-- knot-resolver dot - no logs
 
 #### software
-- knot-resolver v5.5.0
+- knot-resolver v5.5.1
 - encrypted-dns v0.9.1
 - acme.sh, lexicon dns for SSL certs
 - prometheus, node_exporter
