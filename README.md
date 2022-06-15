@@ -10,13 +10,13 @@ Thanks to Frank Denis and other contributors for making this project possible.
 
 #### DNSCrypt
 Server names: tentative\
-plan9dns-nj\
-plan9dns-nj-ipv6\
-plan9dns-nj-doh\
-plan9dns-nj-doh-ipv6\
+plan9-nj\
+plan9-nj-ipv6\
+plan9-nj-doh\
+plan9-nj-doh-ipv6
 
 Anon name: tentative\
-anon-plan9dns-nj\
+anon-plan9dns-nj
 
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
@@ -26,8 +26,15 @@ Protocols: dnscrypt v2 plus anonymization, and doh\
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 #### DNSCrypt
-Server name: TBA\
-Anon name: TBA\
+Server names: tentative\
+plan9-mx\
+plan9-mx-ipv6\
+plan9-mx-doh\
+plan9-mx-doh-ipv6
+
+Anon name: tentative\
+anon-plan9dns-mx
+
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
 
@@ -36,7 +43,12 @@ Protocols: dnscrypt v2 plus anonymization, and doh\
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 #### DNSCrypt
-Server name: plan9-ns2\
+Server names:
+plan9-ns2\
+plan9-ns2-ipv6
+plan9-ns2-doh
+plan9-ns2-doh-ipv6
+
 Anon name: anon-plan9-ns2\
 Protocols: dnscrypt v2 plus anonymization, and doh\
 [Stamps](https://dnscrypt.info/public-servers)
