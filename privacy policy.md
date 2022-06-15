@@ -8,5 +8,5 @@ no logs
 - dnscrypt v2 \
 no logs
 
-Service is not guaranteed, alternative DNS backups are standard practice.
+Service is not guaranteed, alternative DNS backups are standard practice.\
 Mitigations are in effect to block abusers.
