@@ -7,7 +7,7 @@
 
 #### logging policy
 - dnscrypt - no logs
-- knot-resolver doh - no logs
+- knot-resolver - no logs
 
 #### software
 - knot-resolver v5.5.1
