@@ -36,7 +36,23 @@ anon-plan9-mx
 
 [Stamps](https://dnscrypt.info/public-servers)
 
+### Florida, USA resolver
+#### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
+#### DNSCrypt
+Server names: tentative\
+plan9-fl\
+plan9-fl-ipv6\
+plan9-fl-doh\
+plan9-fl-doh-ipv6
+
+Anon name: tentative\
+anon-plan9-fl
+
+[Stamps](https://dnscrypt.info/public-servers)
+
+# NOTICE
+## plan9-ns2 will be shutdown when above resolvers are published on dnscrypt.info/public-servers
 ### Florida resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
