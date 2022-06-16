@@ -5,18 +5,22 @@ Thanks to Frank Denis and other contributors for making this project possible.
 - [Knot Resolver Gitlab](https://github.com/CZ-NIC/knot-resolver)
 
 
+## NOTICE
+#### A recent upgrade to knot-resolver doh protocol is incompatible with encrypted-dns and doh
+#### doh still works with browsers.. eg. firefox
+## NOTICE
+
 ### New Jersey, USA resolver
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 #### DNSCrypt
 Server names: tentative\
 plan9-nj\
-plan9-nj-ipv6\
-plan9-nj-doh\
-plan9-nj-doh-ipv6
+plan9-nj-ipv6
 
 Anon name: tentative\
-anon-plan9-nj
+anon-plan9-nj\
+anon-plan9-nj-ipv6
 
 [Stamps](https://dnscrypt.info/public-servers)
 
@@ -27,12 +31,11 @@ anon-plan9-nj
 #### DNSCrypt
 Server names: tentative\
 plan9-mx\
-plan9-mx-ipv6\
-plan9-mx-doh\
-plan9-mx-doh-ipv6
+plan9-mx-ipv6
 
 Anon name: tentative\
-anon-plan9-mx
+anon-plan9-mx\
+anon-plan9-mx.ipv6
 
 [Stamps](https://dnscrypt.info/public-servers)
 
@@ -42,12 +45,11 @@ anon-plan9-mx
 #### DNSCrypt
 Server names: tentative\
 plan9-fl\
-plan9-fl-ipv6\
-plan9-fl-doh\
-plan9-fl-doh-ipv6
+plan9-fl-ipv6
 
 Anon name: tentative\
-anon-plan9-fl
+anon-plan9-fl\
+anon-plan9-fl-ipv6
 
 [Stamps](https://dnscrypt.info/public-servers)
 
@@ -57,11 +59,9 @@ anon-plan9-fl
 #### Abuse and Privacy [policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 #### DNSCrypt
-Server names:
+Server names:\
 plan9-ns2\
-plan9-ns2-ipv6\
-plan9-ns2-doh\
-plan9-ns2-doh-ipv6
+plan9-ns2-ipv6
 
 Anon name: anon-plan9-ns2
 
