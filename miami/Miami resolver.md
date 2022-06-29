@@ -1,8 +1,17 @@
-## plan9-ns2
+## kronos.plan9-dns.com 
 ### Miami, Florida
 
-### the software used is:
-- encrypted-dns v0.3.23
+#### protocols
+- dns-crypt, anonymization, ipv4/ipv6
+- doh ipv4/ipv6
+
+#### logging policy
+- dnscrypt - no logs
+- knot-resolver - no logs
+
+#### software
 - knot-resolver v5.5.1
-- prometheus, node-exporter
-- acme.sh dns alias for LE certs
+- encrypted-dns v0.9.6
+- doh-server v0.9.0
+- acme.sh, lexicon dns for SSL certs
+- node-exporter, prometheus
