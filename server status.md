@@ -1,5 +1,5 @@
-Mexico City, Mexico resolver in testing
+Mexico City, Mexico resolver fully functional
 
-New Jersy, USA resolver in testing
+New Jersy, USA resolver fully functional
 
 Miami Resolver is fully functional
