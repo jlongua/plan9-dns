@@ -11,6 +11,7 @@
 
 #### software
 - knot-resolver v5.5.1
-- encrypted-dns v0.9.1
+- encrypted-dns v0.9.6
+- doh-server v0.9.0
 - acme.sh, lexicon dns for SSL certs
-- prometheus, node-exporter
+- node-exporter, prometheus
