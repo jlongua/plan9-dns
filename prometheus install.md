@@ -12,7 +12,7 @@ download and extract prometheus
 ```
 add prometheus user and group
 ```sh
-# useradd -rs /sbin/nologin prometheus
+# useradd --system --no-create-home --home /nonexistent --shell=/usr/sbin/nologin prometheus
 # id prometheus
 uid=999(prometheus) gid=999(prometheus) groups=999(prometheus)
 
