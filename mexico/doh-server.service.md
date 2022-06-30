@@ -1,4 +1,4 @@
-``` sh
+```sh
 [Unit]
 Description=doh-server
 Documentation=https://github.com/DNSCrypt/doh-server
