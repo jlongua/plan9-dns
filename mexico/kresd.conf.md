@@ -1,5 +1,5 @@
 ``` sh
-
+### remove this line
 -- SPDX-License-Identifier: CC0-1.0
 -- vim:syntax=lua:set ts=4 sw=4:
 -- Refer to manual: https://knot-resolver.readthedocs.org/en/stable/
