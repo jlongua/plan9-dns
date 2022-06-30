@@ -1,17 +1,14 @@
 catch ssh login attempts in a bucket
-
 ```
 iptables -A INPUT -p tcp -m tcp --dport 22 -m conntrack --ctstate NEW -m hashlimit --hashlimit-above 1/hour --hashlimit-burst 2 --hashlimit-mode srcip --hashlimit-name ssh -j DROP
 ```
 
 set crontab to run script to add ssh ip's to ipset
-
 ```
 */30 * * * * /root/crontabs/ssh_watch.sh 2>&1 | logger -t ssh_watch
 ```
 
 ssh script
-
 ```
 #!/bin/bash
 ### ssh honey pot
