@@ -1,4 +1,4 @@
-```lua
+```sh
 
 -- SPDX-License-Identifier: CC0-1.0
 -- vim:syntax=lua:set ts=4 sw=4:
