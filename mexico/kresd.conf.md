@@ -1,3 +1,5 @@
+```
+
 -- SPDX-License-Identifier: CC0-1.0
 -- vim:syntax=lua:set ts=4 sw=4:
 -- Refer to manual: https://knot-resolver.readthedocs.org/en/stable/
@@ -66,3 +68,5 @@ policy.add(policy.rpz(policy.DENY_MSG('domain blocked'), '/etc/knot-resolver/blo
 
 -- cdc.gov broken DNSSEC
 trust_anchors.set_insecure{'cdc.gov'}
+
+```
