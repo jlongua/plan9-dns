@@ -11,7 +11,7 @@ usage:
 
 #### print pin
 ```sh
-gnutls-cli --print-cert -p 853 draco.plan9-ns2.com | grep "pin-sha256" | head -1
+gnutls-cli --print-cert -p 853 helios.plan9-dns.com | grep "pin-sha256" | head -1
 ```
 
 #### check expiration date
@@ -19,21 +19,21 @@ gnutls-cli --print-cert -p 853 draco.plan9-ns2.com | grep "pin-sha256" | head -1
 - [cli](https://www.cyberciti.biz/faq/find-check-tls-ssl-certificate-expiry-date-from-linux-unix/)
 
 ```sh
-openssl x509 -enddate -noout -in /etc/letsencrypt/plan9-ns2.com_ecc/fullchain.pem
+openssl x509 -enddate -noout -in /etc/zerossl/plan9-dns.com_ecc/fullchain.pem
 ```
 ```sh
-openssl s_client -servername plan9-ns2.com -connect plan9-ns2.com:443 | openssl x509 -noout -dates
+openssl s_client -servername plan9-dns.com -connect plan9-dns.com:443 | openssl x509 -noout -dates
 ```
 
 #### ssl labs
 ```sh
-https://www.ssllabs.com/ssltest/analyze.html?d=draco.plan9-ns2.com
+https://www.ssllabs.com/ssltest/analyze.html?d=helios.plan9-dns.com
 ```
 
 #### view cert info
 ```sh
-openssl s_client -showcerts -connect draco.plan9-ns2.com:443
+openssl s_client -showcerts -connect helios.plan9-dns.com:443
 ```
 ```sh
-openssl s_client -connect draco.plan9-ns2.com:443
+openssl s_client -connect helios.plan9-dns.com:443
 ```
