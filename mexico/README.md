@@ -4,7 +4,7 @@
 #### protocols
 - dnscrypt v2, anonymization, ipv4/ipv6
 - doh ipv4/ipv6
-- tls ipv4/ipv6
+- dot ipv4/ipv6
 
 #### logging policy
 - dnscrypt - no logs
