@@ -2,8 +2,9 @@
 ### Miami, Florida
 
 #### protocols
-- dns-crypt, anonymization, ipv4/ipv6
+- dnscrypt v2, anonymization, ipv4/ipv6
 - doh ipv4/ipv6
+- dot ipv4/ipv6
 
 #### logging policy
 - dnscrypt - no logs
