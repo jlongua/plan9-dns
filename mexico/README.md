@@ -11,6 +11,7 @@
 - knot-resolver - no logs
 
 #### software
+- debian bullseye
 - knot-resolver v5.5.1
 - encrypted-dns-server v0.9.6
 - m13253/DNS-over-HTTPS v2.3.1
