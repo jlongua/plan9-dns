@@ -1,5 +1,5 @@
 
-- [node-exporter download](https://prometheu s.io/download/)
+- [node-exporter download](https://prometheus.io/download)
 
 copy link location and use wget
 
