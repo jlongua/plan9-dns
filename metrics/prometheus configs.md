@@ -23,13 +23,6 @@ modules = { 'serve_stale < cache' }
 
 http.config({ tls = false, })
 http.prometheus.namespace = 'resolver_'
-
--- Cache size
-cache.size = cache.fssize() - 10*MB
-
--- cdc.gov broken DNSSEC
-trust_anchors.set_insecure{'cdc.gov'}
-
 ```
 
 ### prometheus.yml
