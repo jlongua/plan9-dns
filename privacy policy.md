@@ -1,6 +1,5 @@
 #### Abuse Policy:
-plan9 encrypted DNS services are for personel use only. \
-Rate limits are in effect.
+plan9-dns encrypted DNS services are for personel use only.
 
 #### Logging policy:
 - knot-resolver \
@@ -8,5 +7,4 @@ no logs
 - dnscrypt v2 \
 no logs
 
-Service is not guaranteed, alternative DNS backups are standard practice.\
-Mitigations are in effect to block abusers.
+Service is not guaranteed, alternative DNS backups are standard practice.
