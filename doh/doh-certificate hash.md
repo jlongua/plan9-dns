@@ -1,5 +1,5 @@
-https://www.ssl.com/guide/pem-der-crt-and-cer-x-509-encodings-and-conversions \
-https://gist.github.com/jedisct1/d6cb41742a1ceb54d48cc286f3d5c5fa
+- [x509 conversions](https://www.ssl.com/guide/pem-der-crt-and-cer-x-509-encodings-and-conversions)
+- [jedisct1 doh hash](https://gist.github.com/jedisct1/d6cb41742a1ceb54d48cc286f3d5c5fa)
 
 ##### copy ca.cert to temporary directory
 ```sh
