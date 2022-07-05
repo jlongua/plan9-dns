@@ -17,7 +17,6 @@ lexicon 3.11.2
 ```
 #### issue ssl certs
 okay, I forgot that acme.sh now defaults to zerossl\
-this is alot like google throwing gobs of money at firefox to have google as default search engine\
 so for now I am using zerossl
 
 I added  a user with a limited api key that can only be used for DNS changes
