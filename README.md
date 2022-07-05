@@ -27,6 +27,10 @@ plan9dns-nj-doh-ipv6
 anon-plan9dns-nj
 anon-plan9dns-nj-ipv6
 ```
+#### firefox doh setup
+```sh
+https://kronos.plan9-dns.com/dns-query
+```
 
 ### Mexico City, Mexico resolver
 ### helios.plan9-dns.com
@@ -51,6 +55,10 @@ plan9dns-mx-doh-ipv6
 anon-plan9dns-mx
 anon-plan9dns-mx-ipv6
 ```
+#### firefox doh setup
+```sh
+https://helios.plan9-dns.com/dns-query
+```
 
 ### Florida, USA resolver
 ### pluton.plan9-dns.com
@@ -74,4 +82,8 @@ plan9dns-fl-doh-ipv6
 ```sh
 anon-plan9dns-fl
 anon-plan9dns-fl-ipv6
+```
+#### firefox doh setup
+```sh
+https://pluton.plan9-dns.com/dns-query
 ```
