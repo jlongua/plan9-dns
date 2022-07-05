@@ -8,9 +8,11 @@
 ### kronos.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
+### Resolver names for use with dnscrypt-proxy
+
 [Stamps](https://dnscrypt.info/public-servers)
 
-#### DNSCrypt
+#### DNSCrypt v2
 ```sh
 plan9dns-nj
 plan9dns-nj-ipv6
@@ -30,9 +32,11 @@ anon-plan9dns-nj-ipv6
 ### helios.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
+### Resolver names for use with dnscrypt-proxy
+
 [Stamps](https://dnscrypt.info/public-servers)
 
-#### DNSCrypt
+#### DNSCrypt v2
 ```sh
 plan9dns-mx
 plan9dns-mx-ipv6
@@ -52,9 +56,11 @@ anon-plan9dns-mx-ipv6
 ### pluton.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
+### Resolver names for use with dnscrypt-proxy
+
 [Stamps](https://dnscrypt.info/public-servers)
 
-#### DNSCrypt
+#### DNSCrypt v2
 ```sh
 plan9dns-fl
 plan9dns-fl-ipv6
