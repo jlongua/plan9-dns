@@ -1,0 +1,9 @@
+With encrypted-dns v0.9.6 and debian 11 was experiencing a severe memory leak.
+Memory was being consumed in 3-4 hours and oom kicked in.
+
+With encrypted-dns v0.9.6 and debian 10 there was no memory leak...
+
+For now I have downgraded encrypted-dns to v0.3.23 and appears stable.
+
+Most of the updates to encrypted-dns were dependency updates, except for
+v0.9.5 that was for fixing - The server would previously stop accepting connections if the system ran out of file descriptors.
