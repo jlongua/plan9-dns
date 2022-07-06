@@ -15,5 +15,3 @@
 - knot-resolver v5.5.1
 - encrypted-dns-server v0.9.7
 - m13253/DNS-over-HTTPS v2.3.1
-- acme.sh, lexicon dns for SSL certs
-- node-exporter, prometheus
