@@ -13,7 +13,7 @@
 #### software
 - debian bullseye
 - knot-resolver v5.5.1
-- encrypted-dns-server v0.9.6
+- encrypted-dns-server v0.3.23
 - m13253/DNS-over-HTTPS v2.3.1
 - acme.sh, lexicon dns for SSL certs
 - node-exporter, prometheus
