@@ -1,5 +1,5 @@
 With encrypted-dns v0.9.6 and debian 11 was experiencing a severe memory leak.
-Memory was being consumed in 3-4 hours and oom kicked in.
+Memory was being consumed in ~8 hours and oom kicked in.
 
 With encrypted-dns v0.3.23 and debian 10 there was no memory leak...
 
@@ -14,3 +14,6 @@ that has to do with Create certificates using a rolling state
 https://github.com/DNSCrypt/encrypted-dns-server/issues/70
 
 will have to try compiling from source
+okay, installed rust and compiled encrypted-dns per instuction and ended up with encrypted-dns v0.9.7
+
+Installed encrypted-dns v0.9.7 on helios Mexico City resolver and so far looks promising
