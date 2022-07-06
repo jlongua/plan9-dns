@@ -17,3 +17,4 @@ will have to try compiling from source
 okay, installed rust and compiled encrypted-dns per instuction and ended up with encrypted-dns v0.9.7
 
 Installed encrypted-dns v0.9.7 on helios Mexico City resolver and so far looks promising
+Installed encrypted-dns v0.9.7 on kronos New Jersey and pluton Florida resolvers, appears stable
