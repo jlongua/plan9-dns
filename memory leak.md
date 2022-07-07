@@ -19,7 +19,7 @@ okay, installed rust and compiled encrypted-dns per instuction and ended up with
 Installed encrypted-dns v0.9.7 on helios Mexico City resolver and so far looks promising
 Installed encrypted-dns v0.9.7 on kronos New Jersey and pluton Florida resolvers, appears stable
 
-unfortunately had to revert to encrypted-dns v0.3.23 due t0 segfaults
+unfortunately had to revert to encrypted-dns v0.3.23 due to segfaults
 ```sh
 Jul  7 19:36:56 pluton systemd[1]: encrypted-dns.service: Main process exited, code=killed, status=11/SEGV
 Jul  7 19:36:56 pluton systemd[1]: encrypted-dns.service: Failed with result 'signal'.
