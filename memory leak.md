@@ -27,3 +27,8 @@ Jul  7 19:36:56 pluton systemd[1]: encrypted-dns.service: Consumed 7.829s CPU ti
 Jul  7 19:36:56 pluton systemd[1]: encrypted-dns.service: Scheduled restart job, restart counter is at 18.
 Jul  7 19:36:56 pluton systemd[1]: encrypted-dns.service: Consumed 7.829s CPU time.
 ```
+
+more problems, v0.3.23 and also v0.9.1 ramdomly stop accepting udp connections and require a restart of encrypted-dns...
+looks like debian 11 doesn't like encrypted-dns server.
+
+I understand that the docker container of encrypted-dns is built on a minimal version of ubuntu, maybe spin up an ubuntu vps.
