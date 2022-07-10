@@ -32,3 +32,4 @@ more problems, v0.3.23 and also v0.9.1 ramdomly stop accepting udp connections a
 looks like debian 11 doesn't like encrypted-dns server.
 
 I understand that the docker container of encrypted-dns is built on a minimal version of ubuntu, maybe spin up an ubuntu vps.
+Same problem with ubuntu 22.04 lts... next will try ubuntu 20.04 lts which has eol 2025.
