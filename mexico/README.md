@@ -2,17 +2,19 @@
 ### Mexico City, Mexico
 
 #### protocols
-- dnscrypt v2, anonymization, ipv4/ipv6
+- dnscrypt v2, ipv4/ipv6
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
 #### logging policy
-- dnscrypt - no logs
+- dnsdist
+  - dcscrypt - no logs
+  - doh - no logs
+  - dot - no logs
 - knot-resolver - no logs
 
 #### software
 - debian bullseye
 - knot-resolver v5.5.1
-- encrypted-dns-server v0.9.7
-- m13253/DNS-over-HTTPS v2.3.1
+- dnsdist v1.72
 - node-exporter, prometheus
