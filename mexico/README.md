@@ -2,7 +2,7 @@
 ### Mexico City, Mexico
 
 #### protocols
-- dnscrypt v2, ipv4
+- dnscrypt v2 ipv4
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
