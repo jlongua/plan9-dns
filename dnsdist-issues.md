@@ -9,3 +9,5 @@ dnsdist as a front end for DoH and DoT works great, but DNSCrypt has some issues
 - When restarting dnsdist all dnscrypt clients are dropped due to last active cert having been generated and loaded\
   in memory is lost during restart.
   
+##### Even with these issues the New Jersey and Florida plan-dns resolvers will be upgraded to dnsdist due to memory issues with encrypted-dns server and the DoH server being to permissive.
+  
