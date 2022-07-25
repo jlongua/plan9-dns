@@ -2,13 +2,13 @@
 ### Mexico City, Mexico
 
 #### protocols
-- dnscrypt v2, ipv4/ipv6
+- dnscrypt v2, ipv4
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
 #### logging policy
 - dnsdist
-  - dcscrypt - no logs
+  - dnscrypt - no logs
   - doh - no logs
   - dot - no logs
 - knot-resolver - no logs
