@@ -12,5 +12,6 @@ dnsdist as a front end for DoH and DoT works great, but DNSCrypt has some issues
 A new realease of encrypted-dns server looks promising...
 The ideal setup would be encrypted-dns server in front of dnsdist and dnsdist using knot-resolver as the backend.
 
-##### Even with these issues the New Jersey and Florida plan-dns resolvers will be upgraded to dnsdist due to memory issues with encrypted-dns server and the DoH server being to permissive.
+##### Even with these issues the New Jersey and Florida plan9-dns resolvers will be upgraded to dnsdist due to memory issues with encrypted-dns server and the DoH server being to permissive.
   
+Will be testing encrypted-dns server in front of dnsdist on the Mexico plan9-dns resolver...
