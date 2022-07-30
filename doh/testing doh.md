@@ -1,5 +1,6 @@
 ```sh
 jason@dq77mk:~$ curl -v --doh-url https://helios.plan9-dns.com/dns-query https://www.yandex.com
+```
 * Expire in 0 ms for 6 (transfer 0x55583f3f50f0)
 * Expire in 0 ms for 6 (transfer 0x55583f3f8250)
 * Expire in 0 ms for 6 (transfer 0x55583f41cce0)
