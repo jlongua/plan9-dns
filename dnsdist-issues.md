@@ -27,5 +27,5 @@ Jul 29 22:04:16 helios systemd[1]: Stopped Encrypted DNS Server.
 Jul 29 22:04:16 helios systemd[1]: encrypted-dns.service: Consumed 18.611s CPU time.
 Jul 29 22:04:16 helios systemd[1]: Started Encrypted DNS Server.
 ```
-had to revert to encrypted-dns server v0.9.6 which works but is having memory comsumption problems...
+had to revert to encrypted-dns server v0.9.6 which works but is having memory consumption problems...
 restarting encrypted-dns-server service occasionally to mitigate the problem so oom-killer doesn't kick in.
