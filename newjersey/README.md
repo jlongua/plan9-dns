@@ -2,7 +2,7 @@
 ### New Jersey, USA
 
 #### protocols
-- dnscrypt v2, ipv4/ipv6
+- dnscrypt v2 ipv4
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
