@@ -8,7 +8,7 @@
 
 #### logging policy
 - dnsdist
-  - dcscrypt - no logs
+  - dnscrypt - no logs
   - doh - no logs
   - dot - no logs
 - knot-resolver - no logs
