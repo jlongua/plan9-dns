@@ -16,7 +16,6 @@
 #### DNSCrypt v2
 ```sh
 plan9dns-nj
-plan9dns-nj-ipv6
 ```
 #### doh
 ```sh
@@ -39,7 +38,6 @@ https://kronos.plan9-dns.com/dns-query
 #### DNSCrypt v2
 ```sh
 plan9dns-mx
-plan9dns-mx-ipv6
 ```
 #### doh
 ```sh
@@ -62,7 +60,6 @@ https://helios.plan9-dns.com/dns-query
 #### DNSCrypt v2
 ```sh
 plan9dns-fl
-plan9dns-fl-ipv6
 ```
 #### doh
 ```sh
