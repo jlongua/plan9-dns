@@ -11,13 +11,6 @@ dnsdist as a front end for DoH and DoT works great, but DNSCrypt has some issues
   ~~When restarting dnsdist all dnscrypt clients are dropped due to last active cert having been generated and loaded\
   in memory is lost during restart.~~
   
-A new realease of encrypted-dns server looks promising...
-The ideal setup would be encrypted-dns server in front of dnsdist and dnsdist using knot-resolver as the backend.
-
-##### Even with these issues the New Jersey and Florida plan9-dns resolvers will be upgraded to dnsdist due to memory issues with encrypted-dns server and the DoH server being to permissive.
-  
-encrypted-dns server in front of dnsdist on the Mexico plan9-dns resolver is live...
-
 encrypted-dns server v0.9.7 is having gpf
 ```sh
 Jul 29 22:04:15 helios kernel: [546543.712378] traps: encrypted-dns-[42995] general protection fault ip:55d323463171 sp:7f8f0f6e9078 error:0 in encrypted-dns[55d3232d7000+1ad000]
