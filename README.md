@@ -1,8 +1,8 @@
 #### Thanks to Frank Denis and other contributors for making this project possible.
 - [DNSCrypt](https://dnscrypt.info)
 - [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
-- [Knot Resolver Read the Docs](https://knot-resolver.readthedocs.io/en/stable/index.html)
-- [Knot Resolver Gitlab](https://github.com/CZ-NIC/knot-resolver)
+- [PowerDNS Recursor doc](https://doc.powerdns.com/recursor/)
+- [PowerDNS Gitlab](https://github.com/PowerDNS/pdns)
 - [dnsdist](https://https://dnsdist.org)
 
 ### New Jersey, USA resolver
