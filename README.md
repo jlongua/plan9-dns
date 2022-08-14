@@ -3,7 +3,7 @@
 - [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
 - [PowerDNS Recursor doc](https://doc.powerdns.com/recursor/)
 - [PowerDNS Gitlab](https://github.com/PowerDNS/pdns)
-- [dnsdist](https://https://dnsdist.org)
+- [dnsdist](https://dnsdist.org)
 
 ### New Jersey, USA resolver
 ### kronos.plan9-dns.com
