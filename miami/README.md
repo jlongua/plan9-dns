@@ -2,7 +2,7 @@
 ### Miami, Florida
 
 #### protocols
-- dnscrypt v2, ipv4/ipv6
+- dnscrypt v2 ipv4
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
@@ -11,10 +11,10 @@
   - dcscrypt - no logs
   - doh - no logs
   - dot - no logs
-- knot-resolver - no logs
+- pdns-recursor - no logs
 
 #### software
 - debian bullseye
-- knot-resolver v5.5.1
 - dnsdist v1.72
+- pdns-recursor v4.71
 - node-exporter, prometheus
