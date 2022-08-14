@@ -1,7 +1,7 @@
 #### Thanks to Frank Denis and other contributors for making this project possible.
 - [DNSCrypt](https://dnscrypt.info)
 - [SDNS 2021](https://www.youtube.com/playlist?list=PLDlEgzZB7eyJ0_Y2U2Y3Vv5kjj7DmeBIM)
-- [PowerDNS Recursor doc](https://doc.powerdns.com/recursor/)
+- [PowerDNS Recursor](https://doc.powerdns.com/recursor/)
 - [PowerDNS Gitlab](https://github.com/PowerDNS/pdns)
 - [dnsdist](https://dnsdist.org)
 
