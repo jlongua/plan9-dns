@@ -6,15 +6,15 @@
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
-#### logging policy
-- dnsdist
-  - dnscrypt - no logs
-  - doh - no logs
-  - dot - no logs
-- knot-resolver - no logs
-
 #### software
-- debian bullseye
-- knot-resolver v5.5.1
+- debian 11 bullseye
+- powerDNS-recursor v4.7.1
 - dnsdist v1.72
-- node-exporter, prometheus
+- prometheus 
+
+#### logging policy
+- powerDNS-recursor - no logs
+- dnsdist
+  - dnscrypt v2 - no logs
+  - doh - no logs
+  - dot - no logs 
