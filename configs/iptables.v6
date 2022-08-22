@@ -1,0 +1,16 @@
+-P INPUT ACCEPT
+-P FORWARD ACCEPT
+-P OUTPUT ACCEPT
+-A INPUT -m set --match-set permablock.ipv6 src -j DROP
+-A INPUT -i lo -j ACCEPT
+-A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p ipv6-icmp -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 53 -j ACCEPT
+-A INPUT -p udp -m udp --dport 53 -j ACCEPT
+-A INPUT -p udp -m udp --dport 123 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+-A INPUT -p udp -m udp --dport 443 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 853 -j ACCEPT
+-A INPUT -p udp -m udp --dport 853 -j ACCEPT
+-A INPUT -j LOG
+-A INPUT -j DROP
