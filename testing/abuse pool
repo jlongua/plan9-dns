@@ -1,12 +1,9 @@
--- downstream resolver
+-- downstream resolvers
 newServer({address="127.0.0.1:53",qps=0, name="pdns-recursor", pool=""})
 newServer({address="209.244.0.53", qps=15, name="level3", pool="abuse"})
 newServer({address="208.67.222.222", qps=15, name="openDNS", pool="abuse"})
 newServer({address="64.42.181.227", qps=15, name="cryptostorm", pool="abuse"})
 newServer({address="1.1.1.1", qps=15, name="cloudflare", pool="abuse"})
-newServer({address="8.8.8.8", qps=15, name="google", pool="abuse"})
 addAction(MaxQPSIPRule(10), PoolAction("abuse"))
 addAction({"192.241.128.0/17", "120.196.165.40"}, PoolAction("abuse"))
 addAction({'starchat.net.', 'tracker.publicbt.com.'}, PoolAction("abuse"))
-addAction(QTypeRule(DNSQType.ANY), DropAction())
-setMaxTCPConnectionsPerClient(10)
