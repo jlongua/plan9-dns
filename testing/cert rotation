@@ -1,5 +1,5 @@
 -- serial file location
-/var/lib/dnsdist/serial
+-- /var/lib/dnsdist/serial
 
 -- read serial from file
 local f = io.open("/var/lib/dnsdist/serial", "r")
