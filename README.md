@@ -11,7 +11,7 @@
 
 ### Resolver names for use with dnscrypt-proxy
 
-## [==> Stamps <==](https://dnscrypt.info/public-servers)
+## ==> [Stamps](https://dnscrypt.info/public-servers) <==
 
 #### DNSCrypt v2
 ```sh
@@ -33,7 +33,7 @@ https://kronos.plan9-dns.com/dns-query
 
 ### Resolver names for use with dnscrypt-proxy
 
-## [==> Stamps <==](https://dnscrypt.info/public-servers)
+## ==> [Stamps](https://dnscrypt.info/public-servers) <==
 
 #### DNSCrypt v2
 ```sh
@@ -55,7 +55,7 @@ https://helios.plan9-dns.com/dns-query
 
 ### Resolver names for use with dnscrypt-proxy
 
-## [==> Stamps <==](https://dnscrypt.info/public-servers)
+## ==> [Stamps](https://dnscrypt.info/public-servers) <==
 
 #### DNSCrypt v2
 ```sh
