@@ -6,7 +6,7 @@
 - [dnsdist](https://dnsdist.org)
 
 ### New Jersey, USA resolver
-### kronos.plan9-dns.com
+- ### kronos.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 ### Resolver names for use with dnscrypt-proxy
@@ -28,7 +28,7 @@ https://kronos.plan9-dns.com/dns-query
 ```
 
 ### Mexico City, Mexico resolver
-### helios.plan9-dns.com
+- ### helios.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 ### Resolver names for use with dnscrypt-proxy
@@ -50,7 +50,7 @@ https://helios.plan9-dns.com/dns-query
 ```
 
 ### Florida, USA resolver
-### pluton.plan9-dns.com
+- ### pluton.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
 
 ### Resolver names for use with dnscrypt-proxy
