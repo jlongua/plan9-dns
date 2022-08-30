@@ -1,6 +1,6 @@
 - complete --~~add "abuse" pool to dnsdist, addAction(MaxQPSIPRule(20), PoolAction("abuse"))~~
 - complete --~~instead of ouright blocking abusive ips... send them to abuse pool~~
 - complete --~~use local variable saved to disk for dnscrypt cert serial number~~
-- need script to cleanup old expired certs
+- make script to cleanup old expired dnscrypt certs
 - make script to push ssl certs on renewal from cert manager vps to resolver servers and reload certs for DoH and DoT
 - remove prometheus from resolver servers and create prometheus server on cert manager vps
