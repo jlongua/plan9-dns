@@ -5,7 +5,7 @@
 - [PowerDNS Gitlab](https://github.com/PowerDNS/pdns)
 - [dnsdist](https://dnsdist.org)
 
-##### dnsdist helpfull examples
+##### dnsdist helpful examples
 - [dnsdist Mail Archive](https://www.mail-archive.com/dnsdist@mailman.powerdns.com)
 - [Boise Tech Blog](https://boisetech.org/2020/02/25/configuring-dnsdist-a-basic-config)
 
