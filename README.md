@@ -13,7 +13,7 @@
 ### New Jersey, USA resolver
 - ### kronos.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
-## ==> [Stamps](https://dnscrypt.info/public-servers) <==
+## ==> [Stamps](https://dnscrypt.info/public-servers) <==  
 ### Resolver names for use with [dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy/wiki)
 #### DNSCrypt v2
 ```sh
@@ -32,7 +32,7 @@ https://kronos.plan9-dns.com/dns-query
 ### Mexico City, Mexico resolver
 - ### helios.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
-## ==> [Stamps](https://dnscrypt.info/public-servers) <==
+## ==> [Stamps](https://dnscrypt.info/public-servers) <==  
 ### Resolver names for use with [dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy/wiki)
 #### DNSCrypt v2
 ```sh
@@ -51,7 +51,7 @@ https://helios.plan9-dns.com/dns-query
 ### Florida, USA resolver
 - ### pluton.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
-## ==> [Stamps](https://dnscrypt.info/public-servers) <==
+## ==> [Stamps](https://dnscrypt.info/public-servers) <==  
 ### Resolver names for use with [dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy/wiki)
 #### DNSCrypt v2
 ```sh
