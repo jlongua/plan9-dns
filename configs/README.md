@@ -1,5 +1,5 @@
-#### New Jersey, USA - kronos.plan9-dns.com
-#### Miami, Florida - pluton.plan9-dns.com 
+#### Piscataway, New Jersey, USA - kronos.plan9-dns.com
+#### Miami, Florida USA- pluton.plan9-dns.com 
 #### Mexico City, Mexico - helios.plan9-dns.com
 
 #### protocols
