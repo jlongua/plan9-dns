@@ -8,7 +8,7 @@
 ##### dnsdist helpful examples
 - [dnsdist Mail Archive](https://www.mail-archive.com/dnsdist@mailman.powerdns.com)
 - [Boise Tech Blog](https://boisetech.org/2020/02/25/configuring-dnsdist-a-basic-config)
-
+- [ookangzheng gist](https://gist.github.com/ookangzheng/adb438727aeaacfb7b9ea4b574255de6)
 ### New Jersey, USA resolver
 - ### kronos.plan9-dns.com
 [Abuse and Privacy policy](https://github.com/jlongua/plan9-dns/blob/main/privacy%20policy.md)
