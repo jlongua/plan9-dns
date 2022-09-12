@@ -102,18 +102,16 @@ qZcJgOMuYw9MK6olHkascVZPD59NU+aN0VzahU4jANhaRLa4CA==
 ### make directories and install certs
 ```sh
 mkdir -p /etc/zerossl/plan9-dns.com_ecc/
-chown -R knot-resolver: /etc/zerossl 
+chown -R _dnsdist: /etc/zerossl 
 ```
 ```sh
 acme.sh --install-cert -d plan9-dns.com --ecc \
         --cert-file /etc/zerossl/plan9-dns.com_ecc/cert.pem \
         --key-file /etc/zerossl/plan9-dns.com_ecc/private.key \
         --fullchain-file /etc/zerossl/plan9-dns.com_ecc/fullchain.pem \
-        --reloadcmd "systemctl restart kresd@1.service"
 
 [Mon 23 May 2022 12:36:55 AM UTC] Installing cert to: /etc/zerossl/plan9-dns.com_ecc/cert.pem
 [Mon 23 May 2022 12:36:55 AM UTC] Installing key to: /etc/zerossl/plan9-dns.com_ecc/private.key
 [Mon 23 May 2022 12:36:55 AM UTC] Installing full chain to: /etc/zerossl/plan9-dns.com_ecc/fullchain.pem
-[Mon 23 May 2022 12:36:55 AM UTC] Run reload cmd: systemctl restart kresd@1.service
 [Mon 23 May 2022 12:36:55 AM UTC] Reload success
 ```
