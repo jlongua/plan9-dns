@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # script to push certs from certManager vps to encrypted-dns servers
-# crontab 0 0 * * * /root/scripts/certsPush.sh 2>&1 | logger -t certsPush
+# cronjob 0 0 * * * /root/scripts/certsPush.sh 2>&1 | logger -t certsPush
 # stat -c %Z fullchain.pem > last
 # last=$(stat -c %Z fullchain.pem)
 
