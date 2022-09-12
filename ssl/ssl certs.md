@@ -113,5 +113,4 @@ acme.sh --install-cert -d plan9-dns.com --ecc \
 [Mon 23 May 2022 12:36:55 AM UTC] Installing cert to: /etc/zerossl/plan9-dns.com_ecc/cert.pem
 [Mon 23 May 2022 12:36:55 AM UTC] Installing key to: /etc/zerossl/plan9-dns.com_ecc/private.key
 [Mon 23 May 2022 12:36:55 AM UTC] Installing full chain to: /etc/zerossl/plan9-dns.com_ecc/fullchain.pem
-[Mon 23 May 2022 12:36:55 AM UTC] Reload success
 ```
