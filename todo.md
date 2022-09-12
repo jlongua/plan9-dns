@@ -1,3 +1,3 @@
-- make script to cleanup old expired dnscrypt certs
-- make script to push ssl certs on renewal from cert manager vps to resolver servers and reload certs for DoH and DoT
+- not going to do, dnscrypt certs are overwritten on generation  ~~make script to cleanup old expired dnscrypt certs~~
+- complete  ~~make script to push ssl certs on renewal from cert manager vps to resolver servers and reload certs for DoH and DoT~~
 - remove prometheus from resolver servers and create prometheus server on cert manager vps
