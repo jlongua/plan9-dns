@@ -1,6 +1,7 @@
 #!/bin/bash
-#
-# set cronjob to run script once a day
+
+# load new certs pushed from certManager vps
+# cronjob 0 1 * * * /root/scripts/loadNewCerts.sh 2>&1 | logger -t loadNewCerts
 #
 # first time init
 if [ -f "/root/scripts/last" ]; then
