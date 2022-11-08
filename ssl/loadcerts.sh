@@ -26,10 +26,10 @@ if [[ $(cat /home/yourUser/ssl/last) != $(stat -c %Z /home/yourUser/ssl/fullchai
     chown _dnsdist:_dnsdist /etc/zerossl/plan9-dns.com_ecc/fullchain.pem
     chown _dnsdist:_dnsdist /etc/zerossl/plan9-dns.com_ecc/private.key
     echo "running dnsdist load new certs for Doh and Dot binds"
-    /usr/bin/dnsdist -e "getDOHFrontend(0):loadNewCertificatesAndKeys("/etc/zerossl/plan9-dns.com_ecc/fullchain.pem", "/etc/zerossl/plan9-dns.com_ecc/private.key")"
-    /usr/bin/dnsdist -e "getDOHFrontend(1):loadNewCertificatesAndKeys("/etc/zerossl/plan9-dns.com_ecc/fullchain.pem", "/etc/zerossl/plan9-dns.com_ecc/private.key")"
-    /usr/bin/dnsdist -e "getTLSFrontend(0):loadNewCertificatesAndKeys("/etc/zerossl/plan9-dns.com_ecc/fullchain.pem", "/etc/zerossl/plan9-dns.com_ecc/private.key")"
-    /usr/bin/dnsdist -e "getTLSFrontend(1):loadNewCertificatesAndKeys("/etc/zerossl/plan9-dns.com_ecc/fullchain.pem", "/etc/zerossl/plan9-dns.com_ecc/private.key")"
+    /usr/bin/dnsdist -e "getDOHFrontend(0):loadNewCertificatesAndKeys('/etc/zerossl/plan9-dns.com_ecc/fullchain.pem', '/etc/zerossl/plan9-dns.com_ecc/private.key')"
+    /usr/bin/dnsdist -e "getDOHFrontend(1):loadNewCertificatesAndKeys('/etc/zerossl/plan9-dns.com_ecc/fullchain.pem', '/etc/zerossl/plan9-dns.com_ecc/private.key')"
+    /usr/bin/dnsdist -e "getTLSFrontend(0):loadNewCertificatesAndKeys('/etc/zerossl/plan9-dns.com_ecc/fullchain.pem', '/etc/zerossl/plan9-dns.com_ecc/private.key')"
+    /usr/bin/dnsdist -e "getTLSFrontend(1):loadNewCertificatesAndKeys('/etc/zerossl/plan9-dns.com_ecc/fullchain.pem', '/etc/zerossl/plan9-dns.com_ecc/private.key')"
     stat -c %Z /home/yourUser/ssl/fullchain.pem > /home/yourUser/ssl/last
 else
 echo "fullchain.pem has NOT changed"
