@@ -1,6 +1,7 @@
 -P INPUT ACCEPT
 -P FORWARD ACCEPT
 -P OUTPUT ACCEPT
+-A INPUT -m set --match-set threatblock.ipv6 src -j DROP
 -A INPUT -m set --match-set permablock.ipv6 src -j DROP
 -A INPUT -i lo -j ACCEPT
 -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
