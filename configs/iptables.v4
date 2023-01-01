@@ -4,6 +4,8 @@
 -N API
 -N METRICS
 -N SSH
+-A INPUT -m set --match-set sshblock src -j DROP
+-A INPUT -m set --match-set threatblock src -j DROP
 -A INPUT -m set --match-set permablock src -j DROP
 -A INPUT -i lo -j ACCEPT
 -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
