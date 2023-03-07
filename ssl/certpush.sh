@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# SSL certs are aquired on a seperate vps and scp'ed to DNS servers as needed.
+# this script runs on the SSL cert manager vps.
+
 # stat -c %Z fullchain.pem > last
 # last=$(stat -c %Z fullchain.pem)
 ## visudo
