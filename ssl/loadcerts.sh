@@ -8,10 +8,10 @@
 # 0 1 * * * /root/scripts/loadcerts.sh 2>&1 | logger -t loadNewCerts
 
 # first time init
-if [[ ! -f "/home/yellowtom/ssl/last" ]]; then
+if [[ ! -f "/home/youruser/ssl/last" ]]; then
    echo "file last is not exist"
    echo "creating file last"
-   stat -c %Z /home/yellowtom/ssl/fullchain.pem > /home/yellowtom/ssl/last
+   stat -c %Z /home/yourUser/ssl/fullchain.pem > /home/yourUser/ssl/last
 else
     echo "file last is exist"
 fi
