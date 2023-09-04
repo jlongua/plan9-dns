@@ -9,7 +9,7 @@
 
 #### software
 - debian 11 bullseye
-- powerDNS-recursor v4.9.0
+- powerDNS-recursor v4.9.1
 - dnsdist v1.80
 - prometheus v2.37.0
 
