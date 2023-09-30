@@ -1,7 +1,5 @@
 Install Prometheus on Debian Buster
 
-https://linoxide.com/linux-how-to/install-prometheus-ubuntu/
-
 https://prometheus.io/download/
 
 download and extract prometheus
