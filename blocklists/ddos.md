@@ -15,7 +15,6 @@ cat ~/scripts/ddos.sh
 netstat -tulpna | grep FIN_WAIT1 | grep -Eo '([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})' | sort | uniq -c | awk '$1 > 50 { print $2}' | sed -e '/207.246.87.96/d' |
 while read ip
 do
-    echo ipset add ddosBlock $ip
     ipset add ddosBlock $ip
     conntrack -D --src $ip > /dev/null
 done
