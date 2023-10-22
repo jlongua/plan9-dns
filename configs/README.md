@@ -4,7 +4,7 @@
 
 #### protocols
 - dnscrypt v2 ipv4
-- dnscrypt v2 ipv6 --testing
+- dnscrypt v2 ipv6
 - doh ipv4/ipv6
 - dot ipv4/ipv6
 
