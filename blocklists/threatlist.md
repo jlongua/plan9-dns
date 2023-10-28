@@ -6,7 +6,7 @@ cat /root/blocklists/threatlist.sh
 # https://virtualfabric.com/services/free-online-security/free-online-security-downloads/
 #
 # https://dl.threat-list.com/ips/ips.txt
-# --parsing issues-- https://nocdn.threat-list.com/ips/ips.txt
+# https://nocdn.threat-list.com/ips/ips.txt
 #
 # ipset create threatblock hash:net family inet hashsize 327680 maxelem 655360
 # iptables -I INPUT 1 -m set --match-set threatblock src -j DROP
