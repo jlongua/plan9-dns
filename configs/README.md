@@ -13,13 +13,13 @@ stamp = 'sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6YjQwMDoxZDhjOjU0MDA6NGZmOmZlMTE6YjE1
 
 #### protocols
 - dnscrypt v2 ipv4/ipv6
-- doh ipv4/ipv6
-- dot ipv4/ipv6
+- doh (minimum tls v1.3) ipv4/ipv6
+- dot (minimum tls v1.3) ipv4/ipv6
 
 #### software
 - debian 11 bullseye
 - powerDNS-recursor v4.9.1
-- dnsdist v1.81
+- dnsdist v1.82
 - prometheus v2.37.0
 
 #### logging policy
