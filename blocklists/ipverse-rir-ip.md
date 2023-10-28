@@ -35,7 +35,7 @@ grep -Eo '(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([
 
 # flush ipset
 ipset flush ipverse.block
-ipset flus ipverse.block.ipv6
+ipset flush ipverse.block.ipv6
 
 # whitelist ip's
 ipset add ipverse.block <ip> nomatch
