@@ -18,7 +18,7 @@ stamp = 'sdns://AQcAAAAAAAAALVsyMDAxOjE5ZjA6YjQwMDoxZDhjOjU0MDA6NGZmOmZlMTE6YjE1
 
 #### software
 - debian 11 bullseye
-- powerDNS-recursor v4.9.1
+- powerDNS-recursor v4.9.2
 - dnsdist v1.82
 - prometheus v2.37.0
 
