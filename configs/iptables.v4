@@ -4,6 +4,8 @@
 -N API
 -N METRICS
 -N SSH
+-A INPUT -m set --match-set ddosBlock src -j DROP
+-A INPUT -m set --match-set ipverse.block src -j DROP
 -A INPUT -m set --match-set sshblock src -j DROP
 -A INPUT -m set --match-set threatblock src -j DROP
 -A INPUT -m set --match-set permablock src -j DROP
