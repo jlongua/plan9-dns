@@ -5,8 +5,10 @@
 - [PowerDNS Gitlab](https://github.com/PowerDNS/pdns)
 - [dnsdist](https://dnsdist.org)
 
-##### dnsdist helpful examples
-- [dnsdist Mail Archive](https://www.mail-archive.com/dnsdist@mailman.powerdns.com)
+##### The Mail Archive
+- [dnsdist](https://www.mail-archive.com/dnsdist@mailman.powerdns.com)
+##### Reddit DnsCrypt
+- [r/dnscrypt](https://www.reddit.com/r/dnscrypt)
 
 ### New Jersey, USA resolver
 - ### kronos.plan9-dns.com
