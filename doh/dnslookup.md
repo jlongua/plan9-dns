@@ -8,9 +8,13 @@
 ```sh
 ./dnslookup example.org tls://dns.adguard.com 94.140.14.14
 ```
-##### DNS-over-HTTPS:
+##### DNS-over-HTTPS with HTTP/2:
 ```sh
 ./dnslookup example.org https://dns.adguard.com/dns-query
+```
+##### DNS-over-HTTPS forcing HTTP/3 only:
+```sh
+dnslookup example.org h3://dns.google/dns-query
 ```
 ##### DNS-over-HTTPS with IP:
 ```sh
@@ -24,7 +28,7 @@
 ```sh
 ./dnslookup example.org 176.103.130.130:5443 2.dnscrypt.default.ns1.adguard.com D12B:47F2:52DC:F2C2:BBF8:9910:86EA:F79C:E449:5D8B:16C8:A0C4:322E:52CA:3F39:0873
 ```
-##### DNS-over-QUIC (experimental, uses port 784):
+##### DNS-over-QUIC:
 ```sh
 ./dnslookup example.org quic://dns.adguard.com
 ```
