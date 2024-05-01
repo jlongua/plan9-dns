@@ -1,3 +1,4 @@
+```sh
 --[[
 dnsdist config
 initial setup - jlong 08/27/2022
@@ -338,3 +339,4 @@ setWebserverConfig({
   acl="0.0.0.0/0"
   }
 )
+```
