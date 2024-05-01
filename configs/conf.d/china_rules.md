@@ -1,3 +1,4 @@
+```sh
 local china_maxQ = newNMG()
 
 for _, segment in ipairs(china["ipv4"]) do
@@ -25,3 +26,4 @@ addAction(
     name="drop china-maxQ"
     }
 )
+```
