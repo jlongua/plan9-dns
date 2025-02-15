@@ -13,8 +13,8 @@
 
 #### software
 - debian 11 bullseye
-- powerDNS-recursor v5.1.2
-- dnsdist v1.9.7
+- powerDNS-recursor v5.2.0
+- dnsdist v1.9.8
 - prometheus v2.37.0
 
 #### logging policy
