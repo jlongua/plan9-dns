@@ -1,37 +1,58 @@
--P INPUT ACCEPT
--P FORWARD ACCEPT
--P OUTPUT ACCEPT
--N API
--N METRICS
--N SSH
--A INPUT -m set --match-set ddosBlock src -j DROP
+*raw
+:PREROUTING ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A PREROUTING -i enp1s0 -p tcp -m tcp --dport 443 --tcp-flags FIN,SYN,RST,ACK SYN -j CT --notrack
+COMMIT
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT ACCEPT [0:0]
+:API - [0:0]
+:METRICS - [0:0]
+:SSH - [0:0]
+:TCP - [0:0]
+:UDP - [0:0]
+-A INPUT -m set --match-set asnBlock src -j DROP
 -A INPUT -m set --match-set ipverse.block src -j DROP
--A INPUT -m set --match-set sshblock src -j DROP
--A INPUT -m set --match-set threatblock src -j DROP
 -A INPUT -m set --match-set permablock src -j DROP
--A INPUT -i lo -j ACCEPT
+-A INPUT -m set --match-set pscanBlock src -j DROP
+-A INPUT -m set --match-set sshblock src -j DROP
 -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
--A INPUT -p tcp -m tcp --dport 22 -j SSH
--A INPUT -p tcp -m tcp --dport 53 -j ACCEPT
--A INPUT -p udp -m udp --dport 53 -j ACCEPT
--A INPUT -p udp -m udp --dport 123 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
--A INPUT -p udp -m udp --dport 443 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 853 -j ACCEPT
--A INPUT -p udp -m udp --dport 853 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 8083 -j API
--A INPUT -p tcp -m tcp --dport 8443 -j ACCEPT
--A INPUT -p udp -m udp --dport 8443 -j ACCEPT
--A INPUT -p tcp -m tcp --dport 9090 -j METRICS
+-A INPUT -i lo -j ACCEPT
+-A INPUT -i enp1s0 -p tcp -m tcp --dport 443 -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460
+-A INPUT -m conntrack --ctstate INVALID -j DROP
+-A INPUT -p tcp -m tcp --dport 22 --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j SSH
+-A INPUT -p tcp -m tcp --dport 8083 --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j API
+-A INPUT -p tcp -m tcp --dport 9090 --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j METRICS
+-A INPUT -p udp -m conntrack --ctstate NEW -j UDP
+-A INPUT -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j TCP
 -A INPUT -j LOG
--A INPUT -j DROP
+-A INPUT -p udp -j REJECT --reject-with icmp-port-unreachable
+-A INPUT -p tcp -j REJECT --reject-with tcp-reset
+-A INPUT -j REJECT --reject-with icmp-proto-unreachable
 -A API -s allowedip/32 -j ACCEPT
 -A API -s allowedip/32 -j ACCEPT
+-A API -j LOG
 -A API -j DROP
 -A METRICS -s allowedip/32 -j ACCEPT
 -A METRICS -s allowedip/32 -j ACCEPT
 -A METRICS -s allowedip/32 -j ACCEPT
+-A METRICS -j LOG
 -A METRICS -j DROP
 -A SSH -s allowedip/32 -j ACCEPT
 -A SSH -s allowedip/32 -j ACCEPT
+-A SSH -j LOG
 -A SSH -j DROP
+-A TCP -p tcp -m tcp --dport 53 -j ACCEPT
+-A TCP -p tcp -m tcp --dport 853 -j ACCEPT
+-A TCP -p tcp -m tcp --dport 8443 -j ACCEPT
+-A TCP -j LOG
+-A TCP -j DROP
+-A UDP -p udp -m udp --dport 53 -j ACCEPT
+-A UDP -p udp -m udp --dport 123 -j ACCEPT
+-A UDP -p udp -m udp --dport 443 -j ACCEPT
+-A UDP -p udp -m udp --dport 853 -j ACCEPT
+-A UDP -p udp -m udp --dport 8443 -j ACCEPT
+-A UDP -j LOG
+-A UDP -j DROP
+COMMIT
