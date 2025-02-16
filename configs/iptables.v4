@@ -24,6 +24,7 @@ COMMIT
 -A INPUT -p tcp -m tcp --dport 22 --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j SSH
 -A INPUT -p tcp -m tcp --dport 8083 --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j API
 -A INPUT -p tcp -m tcp --dport 9090 --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j METRICS
+-A INPUT -s 169.254.169.254/32 -d 140.82.12.87/32 -p udp -m udp --sport 67 --dport 68 -j ACCEPT
 -A INPUT -p udp -m conntrack --ctstate NEW -j UDP
 -A INPUT -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -m conntrack --ctstate NEW -j TCP
 -A INPUT -j LOG
