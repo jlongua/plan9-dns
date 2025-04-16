@@ -363,7 +363,7 @@ dbr:setQTypeRate(
 )
 
 -- dnscrypt cert rotation
-local last = os.time() - 14400
+local last = os.time()
 function maintenance()
     local now = os.time()
         if ((now - last) > 21600) then
@@ -372,7 +372,7 @@ function maintenance()
                 "/var/lib/dnsdist/providerPrivate.key",
                 "/var/lib/dnsdist/resolver.cert",
                 "/var/lib/dnsdist/resolver.key",
-                serial, now - 60, now + 43200,
+                serial, os.time() - 60, os.time() + 43200,
                 DNSCryptExchangeVersion.VERSION2)
             getDNSCryptBind(0):loadNewCertificate(
                 '/var/lib/dnsdist/resolver.cert',
