@@ -1,0 +1,16 @@
+cat /etc/systemd/system/encrypted-dns.service
+
+[Unit]
+Description=Encrypted DNS Server
+Documentation=https://github.com/DNSCrypt/encrypted-dns-server
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+WorkingDirectory=/etc/dnscrypt-server
+ExecStart=/usr/bin/encrypted-dns -c /etc/dnscrypt-server/encrypted-dns.toml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
