@@ -1,11 +1,18 @@
 Initial testing of dnsdist v2.0.0 alpha1 has cert rotation errors with dnscrypt running 2 binds, ipv4 and ipv6.  
 This gave me a reason to try jedisct1's encrypted-dns dnscrypt server, which also offers anonymization.
 
+Software:
+ - PowerDNS Authoritative Server v4.8.5
+ - PowerDNS Recursor v5.2.2
+ - PowerDNS dnsdist v2.0.0 alpha1
+ - jedisct1 encrypted-dns-server 0.9.16 
+
 Protocols supported ipv4/ipv6:
  - doh2 and doh3 on port 443
  - https://draco.plan9dns.com/dns-query
  - dot and doq on port 853
  - DNSCrypt on port 8443
+ - DNSCrypt anonymization
 
 ### This server is live now and needs testers.
 
