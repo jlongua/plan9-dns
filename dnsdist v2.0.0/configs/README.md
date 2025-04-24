@@ -1,5 +1,9 @@
 Initial testing of dnsdist v2.0.0 alpha1 has cert rotation errors with dnscrypt running 2 binds, ipv4 and ipv6.  
-This gave me a reason to try jedisct1's encrypted-dns dnscrypt server, which also offers anonymization.
+This gave me a reason to try jedisct1's encrypted-dns dnscrypt server, which also offers anonymization.  
+
+Ok, so the team at Powerdns has reproduced the cert rotation error and the fix is in the works.  
+I really like the anonymization feature of jedisct1's encrypted-dns dnscrypt server,  
+and will look into running a anon-relay only, on a different port.
 
 Software:
  - PowerDNS Authoritative Server v4.8.5
