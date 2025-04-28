@@ -39,10 +39,10 @@ setMaxTCPConnectionsPerClient(20)
 includeDirectory('/etc/dnsdist/conf.d/')
 
 -- generate initial dnscrypt long time provider keys
-if not file_exists("/var/lib/dnsdist/providerPublic.key") or not file_exists("/var/lib/dnsdist/providerPrivate.key") then generateDNSCryptProviderKeys("/var/lib/dnsdist/providerPublic.key", "/var/lib/dnsdist/providerPrivate.key")
+if not file_exists("/var/lib/dnsdist/providerPublic.key") or not file_exists("/var/lib/dnsdist/providerPrivate.key") then generateDNSCryptProviderKeys("/var/lib/dnsdist/providerPublic.key", "/var/lib/dnsdist/providerPrivate.key") 
 end
 -- generate initial dnscrypt short time resolver cert/key pair
-if not file_exists("/var/lib/dnsdist/resolver.cert") or not file_exists("/var/lib/dnsdist/resolver.key") then generateDNSCryptCertificate("/var/lib/dnsdist/providerPrivate.key", "/var/lib/dnsdist/resolver.cert", "/var/lib/dnsdist/resolver.key",serial, os.time() - 60, os.time() + 43200, DNSCryptExc hangeVersion.VERSION2)
+if not file_exists("/var/lib/dnsdist/resolver.cert") or not file_exists("/var/lib/dnsdist/resolver.key") then generateDNSCryptCertificate("/var/lib/dnsdist/providerPrivate.key", "/var/lib/dnsdist/resolver.cert",  "/var/lib/dnsdist/resolver.key",serial, os.time() - 60, os.time() + 43200, DNSCryptExchangeVersion.VERSION2) 
 end
 
 -- add DoH, DoH3, DoT, DoQ, DNSCrypt resolvers
@@ -74,6 +74,7 @@ addDOH3Local("[::]", fullchain, privkey,{
     congestionControlAlgo="bbr"
     }
 )
+
 addTLSLocal("0.0.0.0", fullchain, privkey,{
     reusePort=true,
     numberOfStoredSessions=0,
@@ -92,19 +93,17 @@ addDOQLocal("0.0.0.0", fullchain, privkey,{
     congestionControlAlgo="bbr"
     }
 )
-addDOQLocal(
-    "[::]", fullchain, privkey,{
+addDOQLocal("[::]", fullchain, privkey,{
     reusePort=true,
     idleTimeout=5,
     congestionControlAlgo="bbr"
     }
 )
-addDNSCryptBind(
-    "0.0.0.0:8443", provname, "/var/lib/dnsdist/resolver.cert", "/var/lib/dnsdist/resolver.key",
+
+addDNSCryptBind("0.0.0.0:8443", provname, "/var/lib/dnsdist/resolver.cert", "/var/lib/dnsdist/resolver.key",
     {maxConcurrentTCPConnections=250}
 )
-addDNSCryptBind(
-    "[::]:8443", provname, "/var/lib/dnsdist/resolver.cert", "/var/lib/dnsdist/resolver.key",
+addDNSCryptBind("[::]:8443", provname, "/var/lib/dnsdist/resolver.cert", "/var/lib/dnsdist/resolver.key,
     {maxConcurrentTCPConnections=250}
 )
 
@@ -120,37 +119,40 @@ pc = newPacketCache(100000,{
 )
 getPool(""):setCache(pc)
 
-newServer({address="149.112.112.112",
-    healthCheckMode='lazy', checkInterval=1,
+newServer({address="149.112.112.112", name="Quad9", qps=15, pool="abuse",
+    healthCheckMode='lazy',
+    checkInterval=1,
     lazyHealthCheckFailedInterval=30,
-    rise=2, maxCheckFailures=3,
+    rise=2,
+    maxCheckFailures=3,
     lazyHealthCheckThreshold=30,
     lazyHealthCheckSampleSize=100,
     lazyHealthCheckMinSampleCount=10,
-    lazyHealthCheckMode='TimeoutOnly',
-    name="Quad9", qps=15, pool="abuse"
+    lazyHealthCheckMode='TimeoutOnly'
     }
 )
-newServer({address="204.194.232.200",
-    healthCheckMode='lazy', checkInterval=1,
+newServer({address="204.194.232.200", name="openDNS", qps=15, pool="abuse",
+    healthCheckMode='lazy',
+    checkInterval=1,
     lazyHealthCheckFailedInterval=30,
-    rise=2, maxCheckFailures=3,
+    rise=2,
+    maxCheckFailures=3,
     lazyHealthCheckThreshold=30,
     lazyHealthCheckSampleSize=100,
     lazyHealthCheckMinSampleCount=10,
-    lazyHealthCheckMode='TimeoutOnly',
-    name="openDNS", qps=15, pool="abuse"
+    lazyHealthCheckMode='TimeoutOnly'
     }
 )
-newServer({address="209.244.0.3",
-    healthCheckMode='lazy', checkInterval=1,
+newServer({address="209.244.0.3", name="level3", qps=15, pool="abuse",
+    healthCheckMode='lazy',
+    checkInterval=1,
     lazyHealthCheckFailedInterval=30,
-    rise=2, maxCheckFailures=3,
+    rise=2,
+    maxCheckFailures=3,
     lazyHealthCheckThreshold=30,
     lazyHealthCheckSampleSize=100,
     lazyHealthCheckMinSampleCount=10,
-    lazyHealthCheckMode='TimeoutOnly',
-    name="level3", qps=15, pool="abuse"
+    lazyHealthCheckMode='TimeoutOnly'
     }
 )
 setPoolServerPolicy(roundrobin, "abuse")
@@ -168,7 +170,7 @@ addAction(TagRule("one-question-rule", "match"),
 )
 ]]
 addAction(TagRule("one-question-rule", "match"),
-    RCodeAction( DNSRCode.REFUSED),
+    RCodeAction(DNSRCode.REFUSED),
     {name="refuse !oneQuestion"}
 )
 -- spoof ANY TCP
