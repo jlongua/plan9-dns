@@ -2,11 +2,11 @@
 local china_maxQ = newNMG()
 
 for _, segment in ipairs(china["ipv4"]) do
-   china_maxQ:addMask(segment)
+    china_maxQ:addMask(segment)
 end
 
 for _, segment in ipairs(china["ipv6"]) do
-   china_maxQ:addMask(segment)
+    china_maxQ:addMask(segment)
 end
 
 addAction(AndRule({NetmaskGroupRule(china_maxQ, true),MaxQPSIPRule(5)}),
