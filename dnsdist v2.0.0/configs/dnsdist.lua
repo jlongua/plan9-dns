@@ -1,16 +1,35 @@
 --[[
-dnsdist config v2.0.0 alpha1 testing 04/21/2025
-removed dnscrypt due to cert-rotation error
-using jedisct1 https://github.com/DNSCrypt/encrypted-dns-server
+dnsdist.conf v2.0.0 alpha1 testing 04/21/2025
 initial setup - jlong 08/27/2022
   mkdir /var/lib/dnsdist
+  nano /var/lib/dnsdist/serial => enter 1
   chown -R _dnsdist: /var/lib/dnsdist
   edit local fullchain and local privkey
+  edit local provname - eg. 2.dnscrypt-cert.example.com
+print dnscrypt public key from console
+> printDNSCryptProviderFingerprint("/var/lib/dnsdist/providerPublic.key")
 ]]
+
+function file_exists(name)
+    local file = io.open(name, "r")
+    if file ~= nil then
+        io.close(file)
+        return true
+    else
+        return false
+    end
+end
+
+-- set variable serial
+local f = io.open("/var/lib/dnsdist/serial", "r")
+local serial = f:read("*n")
+f:close()
 
 -- path to SSL certs
 local fullchain = "/etc/zerossl/plan9dns.com_ecc/fullchain.pem"
 local privkey = "/etc/zerossl/plan9dns.com_ecc/private.key"
+-- dnscrypt provider name
+local provname = "2.dnscrypt-cert.draco.plan9dns.com"
 
 setLocal("127.0.0.1:5353")
 addLocal('[::1]:5353')
@@ -18,6 +37,16 @@ setACL({'0.0.0.0/0', '::/0'})
 SetDisableECSAction()
 setMaxTCPConnectionsPerClient(25)
 includeDirectory('/etc/dnsdist/conf.d/')
+
+-- generate initial dnscrypt long time provider keys
+if not file_exists("/var/lib/dnsdist/providerPublic.key") or not file_exists("/var/lib/dnsdist/providerPrivate.key") then 
+    generateDNSCryptProviderKeys("/var/lib/dnsdist/providerPublic.key", "/var/lib/dnsdist/providerPrivate.key")
+end
+-- generate initial dnscrypt short time resolver cert/key pair
+if not file_exists("/var/lib/dnsdist/resolver.cert") or not file_exists("/var/lib/dnsdist/resolver.key") then
+    generateDNSCryptCertificate("/var/lib/dnsdist/providerPrivate.key", "/var/lib/dnsdist/resolver.cert", 
+    "/var/lib/dnsdist/resolver.key", serial, os.time() - 60, os.time() + 43200, DNSCryptExchangeVersion.VERSION2)
+end
 
 -- add DoH, DoT, DNSCrypt resolvers
 addDOHLocal("0.0.0.0", fullchain, privkey, "/dns-query",{
@@ -119,28 +148,28 @@ setPoolServerPolicy(roundrobin, "abuse")
 --rules
 -- refuse more than one question per query
 addAction(NotRule(RecordsCountRule(DNSSection.Question, 1, 1)),
-  SetTagAction("one-question-rule", "match"), {
-  name="tag !oneQuestion"})
+  SetTagAction("one-question-rule", "match"),
+  {name="tag !oneQuestion"})
 
 --[[ (uncomment to test rule)
 addAction(TagRule("one-question-rule", "match"),
-  LogAction('/var/lib/dnsdist/oneQuestion.log', false, true, true, true, true), {
-  name="log !oneQuestion"})
+  LogAction('/var/lib/dnsdist/oneQuestion.log', false, true, true, true, true),
+  {name="log !oneQuestion"})
 ]]
 
 addAction(TagRule("one-question-rule", "match"),
-  RCodeAction( DNSRCode.REFUSED), {
-  name="refuse !oneQuestion"})
+  RCodeAction( DNSRCode.REFUSED),
+  {name="refuse !oneQuestion"})
 
 -- spoof ANY TCP
 addAction(AndRule({QTypeRule(DNSQType.ANY), TCPRule(true)}),
-  SpoofRawAction("\007rfc\056\052\056\050\000", {typeForAny=DNSQType.HINFO }), {
-  name="spoof ANY TCP"})
+  SpoofRawAction("\007rfc\056\052\056\050\000", {typeForAny=DNSQType.HINFO }),
+  {name="spoof ANY TCP"})
 
 -- drop ANY UDP
 addAction(AndRule({QTypeRule(DNSQType.ANY), TCPRule(false)}),
-  DropAction(), {
-  name="drop ANY UDP"})
+  DropAction(),
+  {name="drop ANY UDP"})
 
 -- drop RFC1918 PTR
 local smn = newSuffixMatchNode()
@@ -163,32 +192,32 @@ smn:add("29.172.in-addr.arpa.")
 smn:add("30.172.in-addr.arpa.")
 smn:add("31.172.in-addr.arpa.")
 addAction(AndRule({SuffixMatchNodeRule(smn), QTypeRule(DNSQType.PTR)}),
-  SetTagAction("smn-rule", "match"), {
-  name="tag smn"})
+  SetTagAction("smn-rule", "match"),
+  {name="tag smn"})
 
 addAction(TagRule("smn-rule", "match"),
-  DropAction(),{
-  name="drop smn"})
+  DropAction(),
+  {name="drop smn"})
 
 -- drop maxQueries excluding !ip masks
 maxQueries=newNMG()
 maxQueries:addMask('0.0.0.0/0')
-maxQueries:addMask('!111.222.333.444/32')
+maxQueries:addMask('!111.222.111.222/32')
 maxQueries:addMask('::/0')
 maxQueries:addMask('!2030:fff:aaa:dddd:dead:beef:bbbb:cccc/128')
 addAction(AndRule({NetmaskGroupRule(maxQueries, true), MaxQPSIPRule(75)}),
-  SetTagAction("max-queries-rule", "match"), {
-  name="tag maxQueries"})
+  SetTagAction("max-queries-rule", "match"),
+  {name="tag maxQueries"})
 
 addAction(TagRule("max-queries-rule", "match"),
-  DropAction(), {
-  name="drop maxQueries"})
+  DropAction(),
+  {name="drop maxQueries"})
 
 -- dynBlocks
 local dbr = dynBlockRulesGroup()
 dbr:excludeRange({
   "127.0.0.1/32",
-  "111.222.333.444/32",
+  "111.222.111.222/32",
   "::1/128",
   "2030:fff:aaa:dddd:dead:beef:bbbb:cccc/128"})
 dbr:setQueryRate(155, 10, "Exceeded Query rate", 75, DNSAction.Drop)
@@ -201,7 +230,22 @@ dbr:setQTypeRate(DNSQType.NS, 20, 10, "Exceeded NS rate", 60, DNSAction.Drop)
 dbr:setQTypeRate(DNSQType.DS, 20, 10, "Exceeded DS rate", 60, DNSAction.Drop)
 dbr:setQTypeRate(DNSQType.HTTPS, 20, 10, "Exceeded HTTPS rate", 60, DNSAction.Drop)
 
+-- dnscrypt cert rotation
+-- generates a new cert every 8 hours, cert is valid for 12 hours
+local last = os.time()
 function maintenance()
+    local now = os.time()
+    if ((now - last) > 28800) then
+        serial = serial + 1
+        generateDNSCryptCertificate("/var/lib/dnsdist/providerPrivate.key", "/var/lib/dnsdist/resolver.cert", 
+        "/var/lib/dnsdist/resolver.key", serial, os.time() - 60, os.time() + 43200, DNSCryptExchangeVersion.VERSION2)
+        getDNSCryptBind(0):loadNewCertificate('/var/lib/dnsdist/resolver.cert', '/var/lib/dnsdist/resolver.key')
+        getDNSCryptBind(1):loadNewCertificate('/var/lib/dnsdist/resolver.cert', '/var/lib/dnsdist/resolver.key')
+        last = now
+        local f = io.open("/var/lib/dnsdist/serial", "w")
+        f:write(serial)
+        f:close()
+    end
   dbr:apply()
 end
 
