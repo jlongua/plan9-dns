@@ -1,18 +1,15 @@
-Encrypted DNS server draco.plan9dns.com  
-TESTING dnsdist v2.0.0 master branch
+Encrypted DNS server draco.plan9dns.com
 
 Software:
  - PowerDNS Authoritative Server v4.8.5
- - PowerDNS Recursor v5.2.2
- - PowerDNS dnsdist v2.0.0 alpha1 
+ - PowerDNS Recursor v5.2.5
+ - PowerDNS dnsdist v2.0.0
 
 Protocols supported ipv4/ipv6:
  - DNSCrypt on port 8443
  - doh2 and doh3 on port 443
  - https://draco.plan9dns.com/dns-query
  - dot and doq on port 853
- 
-### This server is live for testing use only.
 
 DNSCrypt stamps
 ```sh
