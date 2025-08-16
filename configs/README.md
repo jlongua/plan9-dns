@@ -7,14 +7,14 @@
 #### protocols
 - DNSCrypt v2 ipv4/ipv6, port 8443
 - DoH (minimum tls v1.3) ipv4/ipv6, port 443
-- --Currently Disabled-- DoH3 HTTP/3 via the Alt-Svc header, ipv4/ipv6, port 443
+- DoH3 HTTP/3 via the Alt-Svc header, ipv4/ipv6, port 443
 - DoT (minimum tls v1.3) ipv4/ipv6, port 853
-- --Currently Disabled-- DoQ ipv4/ipv6, port 853
+- DoQ ipv4/ipv6, port 853
 
 #### software
 - debian 11 bullseye
-- powerDNS-recursor v5.2.0
-- dnsdist v1.9.8
+- powerDNS-recursor v5.2.5
+- dnsdist v2.0.0
 - prometheus v2.37.0
 
 #### logging policy
