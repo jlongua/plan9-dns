@@ -7,9 +7,9 @@
 #### protocols
 - DNSCrypt v2 ipv4/ipv6, port 8443
 - DoH (minimum tls v1.3) ipv4/ipv6, port 443
-- DoH3 HTTP/3 via the Alt-Svc header, ipv4/ipv6, port 443
+- DISABLED - DoH3 HTTP/3 via the Alt-Svc header, ipv4/ipv6, port 443
 - DoT (minimum tls v1.3) ipv4/ipv6, port 853
-- DoQ ipv4/ipv6, port 853
+- DISABLED - DoQ ipv4/ipv6, port 853
 
 #### software
 - debian 11 bullseye
