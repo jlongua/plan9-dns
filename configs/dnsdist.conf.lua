@@ -247,10 +247,13 @@ dbr:setQTypeRate(DNSQType.DS, 20, 10, "Exceeded DS rate", 60, DNSAction.Drop)
 dbr:setQTypeRate(DNSQType.HTTPS, 20, 10, "Exceeded HTTPS rate", 60, DNSAction.Drop)
 
 -- dnscrypt cert rotation
-local last = os.time()
+-- generates a new cert every 8 hours, cert is valid for 12 hours
+-- new cert is generated 4 hours before previous cert expires
+-- upon restart or reboot last cert is reused and a new cert is generated in 2 hours
+local last = os.time() - 21600
 function maintenance()
     local now = os.time()
-        if ((now - last) > 21600) then
+        if ((now - last) > 28800) then
             serial = serial + 1
             generateDNSCryptCertificate("/var/lib/dnsdist/providerPrivate.key", "/var/lib/dnsdist/resolver.cert", "/var/lib/dnsdist/resolver.key", serial, os.time() - 60, os.time() + 43200, DNSCryptExchangeVersion.VERSION2)
             getDNSCryptBind(0):loadNewCertificate('/var/lib/dnsdist/resolver.cert', '/var/lib/dnsdist/resolver.key')
