@@ -1,9 +1,9 @@
 Encrypted DNS server draco.plan9dns.com
 
 Software:
- - PowerDNS Authoritative Server v4.8.5
+ - PowerDNS Authoritative Server v5.0.0
  - PowerDNS Recursor v5.2.5
- - PowerDNS dnsdist v2.0.0
+ - PowerDNS dnsdist v2.0.1
 
 Protocols supported ipv4/ipv6:
  - DNSCrypt on port 8443
