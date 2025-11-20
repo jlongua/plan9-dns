@@ -232,7 +232,9 @@ dbr:setQTypeRate(DNSQType.HTTPS, 20, 10, "Exceeded HTTPS rate", 60, DNSAction.Dr
 
 -- dnscrypt cert rotation
 -- generates a new cert every 8 hours, cert is valid for 12 hours
-local last = os.time()
+-- new cert is generated 4 hours before previous cert expires
+-- upon restart or reboot last cert is reused and a new cert is generated in 2 hours
+local last = os.time() - 21600
 function maintenance()
     local now = os.time()
     if ((now - last) > 28800) then
